@@ -65,3 +65,26 @@ with open('./msupdater.pkg', 'wb') as f:
 os.system('sudo installer -pkg ./msupdater.pkg -target /')
 os.system('cd /Library/Application\ Support/Microsoft/MAU2.0/Microsoft\ AutoUpdate.app/Contents/MacOS && ./msupdate --install')
 ```
+
+*** slack (python)
+```
+*** microsoft (python) (installer) (run as user with admin priveledges, eg sudo)
+```
+#!/usr/bin/env python
+import urllib2
+import os
+import sys
+
+src = "https://raw.githubusercontent.com/bwiessner/install_latest_slack_osx_app/master/install_latest_slack_osx_app.sh"
+dest = "slack.sh"
+
+filedata = urllib2.urlopen(src)
+datatowrite = filedata.read()
+
+with open('./' + dest, 'wb') as f:
+    f.write(datatowrite)
+    
+os.system('sudo chmod +x' + dest)
+os.system('sudo ./' + dest)
+
+```
