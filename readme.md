@@ -12,8 +12,12 @@ dscacheutil -flushcache
 *** user creation (sysadminctl)
 ```
 #!/bin/sh
+ACN="buser"
+FN="Bob User"
+PW="password"
+sudo sysadminctl -addUser $ACN -fullName $FN -password $PW
+# extra below
 sudo sysadminctl -deleteUser floater
-sudo sysadminctl -addUser bobuser -fullName "Bob User" -password "password"
 sudo sysadminctl -add sysadminctl -secureTokenStatus tracy
 ```
 
