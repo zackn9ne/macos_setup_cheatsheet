@@ -40,7 +40,7 @@ from docklib import Dock
 
 def makeDock():
     tech_dock = [ 
-        '/Applications/Google Chrome.app', j
+        '/Applications/Google Chrome.app',
         '/Applications/Microsoft Excel.app', 
         '/Applications/Microsoft Word.app', 
         '/Applications/Microsoft PowerPoint.app', 
