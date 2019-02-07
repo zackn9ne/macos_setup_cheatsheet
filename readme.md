@@ -3,8 +3,9 @@ This is to drop into a terminal to setup macos
 *** hostname (scutil)
 ```
 #!/bin/sh
-scutil --set ComputerName "Tracy-MacBook-Air"
-scutil --set LocalHostName "Tracy-MacBook-Air"
+HWNAME="The-user"
+scutil --set ComputerName $HWNAME
+scutil --set LocalHostName $HWNAME
 dscacheutil -flushcache
 ```
 
