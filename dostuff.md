@@ -48,3 +48,19 @@ def makeDock():
 
 makeDock()
 ```
+
+*** microsoft (python) (installer) (bash)
+```
+#!/usr/bin/env python
+import urllib2
+import os
+import sys
+
+filedata = urllib2.urlopen('https://go.microsoft.com/fwlink/?linkid=830196')
+datatowrite = filedata.read()
+
+with open('./msupdater.pkg', 'wb') as f:
+    f.write(datatowrite)
+
+os.system('sudo installer -pkg ./msupdater.pkg -target /')
+```
