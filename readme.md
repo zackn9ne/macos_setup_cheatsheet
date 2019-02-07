@@ -17,6 +17,8 @@ FN="Bob User"
 PW="password"
 sudo sysadminctl -addUser $ACN -fullName $FN -password $PW
 # extra below
+## is user admin
+sudo dscl . -append /groups/admin GroupMembership $ACN
 sudo sysadminctl -deleteUser floater
 sudo sysadminctl -add sysadminctl -secureTokenStatus tracy
 ```
