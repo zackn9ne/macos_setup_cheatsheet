@@ -3,7 +3,7 @@ This is to drop into a terminal to setup macos
 *** hostname (scutil)
 ```
 #!/bin/sh
-HWNAME="The-user"
+HWNAME="The-host-name"
 scutil --set ComputerName $HWNAME
 scutil --set LocalHostName $HWNAME
 dscacheutil -flushcache
