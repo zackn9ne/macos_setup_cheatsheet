@@ -49,7 +49,7 @@ def makeDock():
 makeDock()
 ```
 
-*** microsoft (python) (installer) (bash)
+*** microsoft (python) (installer) (run as user with admin priveledges, eg sudo)
 ```
 #!/usr/bin/env python
 import urllib2
@@ -63,4 +63,5 @@ with open('./msupdater.pkg', 'wb') as f:
     f.write(datatowrite)
 
 os.system('sudo installer -pkg ./msupdater.pkg -target /')
+os.system('cd /Library/Application\ Support/Microsoft/MAU2.0/Microsoft\ AutoUpdate.app/Contents/MacOS && ./msupdate --install')
 ```
