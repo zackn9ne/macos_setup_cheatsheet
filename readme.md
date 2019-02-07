@@ -68,8 +68,6 @@ os.system('cd /Library/Application\ Support/Microsoft/MAU2.0/Microsoft\ AutoUpda
 
 *** slack (python)
 ```
-*** microsoft (python) (installer) (run as user with admin priveledges, eg sudo)
-```
 #!/usr/bin/env python
 import urllib2
 import os
