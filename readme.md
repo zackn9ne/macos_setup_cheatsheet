@@ -6,7 +6,7 @@ sudo pkill loginwindow #logs you out eg, xdg-logout gnome-session-quit
 dscl . list /Users | grep -v "^_" #list users
 dscacheutil -q group -a name admin #list only admin users
 pmset noidle #no idle
-softwareupdate -i -a
+softwareupdate -i -a --restart
 ```
 
 *** hostname (scutil)
