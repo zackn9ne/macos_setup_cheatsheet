@@ -1,5 +1,12 @@
 This is to drop into a terminal to setup macos
 
+*** swiss-army-knife
+```
+sudo pkill loginwindow #logs you out eg, xdg-logout gnome-session-quit
+dscl . list /Users | grep -v "^_" #list users
+dscacheutil -q group -a name admin #list only admin users
+pmset noidle #no idle
+
 *** hostname (scutil)
 ```
 #!/bin/sh
