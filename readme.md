@@ -15,6 +15,11 @@ curl -o install.py https://raw.githubusercontent.com/munki/macadmin-scripts/mast
 sudo python install.py
 ```
 
+*** install dockutil (bootstrap)
+```
+curl -o dockutil.py https://raw.githubusercontent.com/kcrawford/dockutil/master/scripts/dockutil
+```
+
 *** hostname (scutil)
 ```
 #!/bin/sh
