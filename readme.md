@@ -18,7 +18,7 @@ scutil --set LocalHostName $HWNAME
 dscacheutil -flushcache
 ```
 
-*** user creation (sysadminctl)
+*** user creation (sysadminctl) #need help with these
 ```
 #!/bin/sh
 ACN="buser"
@@ -32,7 +32,12 @@ sudo sysadminctl -deleteUser floater
 sudo sysadminctl -add sysadminctl -secureTokenStatus tracy
 ```
 
-*** dock creation make a python script and chmod +x it (python)
+*** send notification to user
+```
+osascript -e 'display alert "Hello World!" message "The reason for this pop-up alert: IT Work In Progress"'
+```
+
+*** dock creation make a python script and chmod +x it (python) #should use mobileconfig
 ```
 #!/usr/bin/env python
 import urllib2
