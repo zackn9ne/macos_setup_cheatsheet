@@ -24,8 +24,8 @@ curl -o dockutil.py https://raw.githubusercontent.com/kcrawford/dockutil/master/
 ```
 #!/bin/sh
 HWNAME="The-host-name"
-scutil --set ComputerName $HWNAME
-scutil --set LocalHostName $HWNAME
+scutil --set ComputerName "$HWNAME"
+scutil --set LocalHostName "$HWNAME"
 dscacheutil -flushcache
 ```
 
@@ -35,10 +35,10 @@ dscacheutil -flushcache
 ACN="buser"
 FN="Bob User"
 PW="password"
-sudo sysadminctl -addUser $ACN -fullName $FN -password $PW
+sudo sysadminctl -addUser "$ACN" -fullName $FN -password "$PW"
 # extra below
 ## is user admin
-sudo dscl . -append /groups/admin GroupMembership $ACN
+sudo dscl . -append /groups/admin GroupMembership "$ACN"
 sudo sysadminctl -deleteUser floater
 sudo sysadminctl -add sysadminctl -secureTokenStatus tracy
 ```
