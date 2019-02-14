@@ -9,6 +9,12 @@ pmset noidle #no idle
 softwareupdate -i -a --restart
 ```
 
+*** installmacos.py
+```
+curl -o install.py https://raw.githubusercontent.com/munki/macadmin-scripts/master/installinstallmacos.py
+sudo python install.py
+```
+
 *** hostname (scutil)
 ```
 #!/bin/sh
