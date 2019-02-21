@@ -14,9 +14,11 @@ ioreg -r -k AppleClamshellState -d 4 | grep AppleClamshellState  | head -1
 ```
 curl -o install.py https://raw.githubusercontent.com/munki/macadmin-scripts/master/installinstallmacos.py
 sudo python install.py
+## do user interaction, wait for download, then...
+hdiutil attach ./Install_macOS_10.14.3-18D109.dmg 
 ```
 
-*** install dockutil (bootstrap)
+*** install dockutil (todo bootstrap this into a dock icon making script)
 ```
 curl -o dockutil.py https://raw.githubusercontent.com/kcrawford/dockutil/master/scripts/dockutil
 ```
