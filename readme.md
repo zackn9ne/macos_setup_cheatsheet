@@ -1,6 +1,6 @@
 This is to drop into a terminal to setup macos
 
-*** swiss-army-knife mojave edition
+### swiss-army-knife mojave edition
 ```
 sudo pkill loginwindow #logs you out eg, xdg-logout gnome-session-quit
 dscacheutil -q group -a name admin #list only admin users
@@ -10,7 +10,7 @@ softwareupdate -i -a --restart
 ioreg -r -k AppleClamshellState -d 4 | grep AppleClamshellState  | head -1
 ```
 
-*** installmacos.py
+### installmacos.py
 ```
 curl -o install.py https://raw.githubusercontent.com/munki/macadmin-scripts/master/installinstallmacos.py
 sudo python install.py
@@ -18,12 +18,12 @@ sudo python install.py
 hdiutil attach ./Install_macOS_10.14.3-18D109.dmg 
 ```
 
-*** install dockutil (todo bootstrap this into a dock icon making script)
+### install dockutil (todo bootstrap this into a dock icon making script)
 ```
 curl -o dockutil.py https://raw.githubusercontent.com/kcrawford/dockutil/master/scripts/dockutil
 ```
 
-*** hostname (scutil)
+### hostname (scutil)
 ```
 #!/bin/sh
 HWNAME="The-host-name"
@@ -32,8 +32,9 @@ scutil --set LocalHostName "$HWNAME"
 dscacheutil -flushcache
 ```
 
-*** user creation (sysadminctl) #need help with these
-**** via createuserpackage.py
+### user creation (sysadminctl) #need help with these
+
+#### via createuserpackage.py
 ```
 #get the script (if this errors, download the developer command line tools).
 git clone https://github.com/gregneagle/pycreateuserpkg.git
@@ -61,12 +62,12 @@ sudo sysadminctl -deleteUser floater
 sudo sysadminctl -add sysadminctl -secureTokenStatus tracy
 ```
 
-*** send notification to user
+### send notification to user
 ```
 osascript -e 'display alert "Hello World!" message "The reason for this pop-up alert: IT Work In Progress"'
 ```
 
-*** dock creation make a python script and chmod +x it (python) #should use mobileconfig
+### dock creation make a python script and chmod +x it (python) #should use mobileconfig
 ```
 #!/usr/bin/env python
 import urllib2
@@ -99,7 +100,7 @@ def makeDock():
 makeDock()
 ```
 
-*** microsoft (python) (installer) (run as user with admin priveledges, eg sudo)
+### microsoft (python) (installer) (run as user with admin priveledges, eg sudo)
 ```
 #!/usr/bin/env python
 import urllib2
@@ -116,7 +117,7 @@ os.system('sudo installer -pkg ./msupdater.pkg -target /')
 os.system('cd /Library/Application\ Support/Microsoft/MAU2.0/Microsoft\ AutoUpdate.app/Contents/MacOS && ./msupdate --install')
 ```
 
-*** slack (python)
+### slack (python)
 ```
 #!/usr/bin/env python
 import urllib2
