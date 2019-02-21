@@ -33,6 +33,21 @@ dscacheutil -flushcache
 ```
 
 *** user creation (sysadminctl) #need help with these
+**** via createuserpackage.py
+```
+#get the script (if this errors, download the developer command line tools).
+git clone https://github.com/gregneagle/pycreateuserpkg.git
+ 
+#go into the project
+cd pycreateuserpkg
+ 
+#run the script with options replacing username, password, UID, and where you want to save it
+#createuserpkg -a -u UID -n SHORTNAME  -p PASSWORD -V VERSION -i  PACKAGE_IDENTIFIER /path/to/save/user.pkg
+#this will create an admin user named "mac" with password "mac" with a package version "1" and a package identifier com.twocanoes.mds.createuser and save it to a package called User.pkg in /tmp. Don't worry too much about the version and identifier, just use reasonable values.
+#The UID should be something >500, since macOS starts creating users around there. I usually start at 900. 
+./createuserpkg -a -u 900 -n "mac"  -p mac -V 1 -i  com.twocanoes.mds.createuser /tmp/User.pkg
+```
+
 ```
 #!/bin/sh
 ACN="buser"
