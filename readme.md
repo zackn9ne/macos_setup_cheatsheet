@@ -18,7 +18,7 @@ sudo python install.py
 hdiutil attach ./Install_macOS_10.14.3-18D109.dmg 
 ```
 
-### install dockutil (todo bootstrap this into a dock icon making script)
+### install dockutil (todo bootstrap this into a dock icon making script) dependant on https://github.com/homebysix/docklib (first curl)
 ```
 #!/bin/sh
 curl -O https://raw.githubusercontent.com/homebysix/docklib/4f3e173367f24b034c60092472c9523d8c7ddfca/docklib.py
