@@ -20,29 +20,10 @@ hdiutil attach ./Install_macOS_10.14.3-18D109.dmg
 
 ### install dockutil (todo bootstrap this into a dock icon making script)
 ```
+#!/bin/sh
 curl -O https://raw.githubusercontent.com/homebysix/docklib/4f3e173367f24b034c60092472c9523d8c7ddfca/docklib.py
 curl -O https://gist.githubusercontent.com/zackn9ne/8183cd12667fb04a24972649685ec9a1/raw/9748a422f8b77067e4af3520aa9dc512febc04bb/dockv2.py
 python dockv2.py
-
-```
-
-import os
-from docklib import Dock
-
-def makeDock():
-    tech_dock = [
-        'Google Chrome',
-        'Microsoft Excel',
-        'Microsoft Word',
-        'Microsoft PowerPoint',
-        'Slack'
-    ]
-    dock = Dock()
-    for item in tech_dock:
-       item = dock.removeDockEntry(item)
-    dock.save()
-
-makeDock()
 
 ```
 
