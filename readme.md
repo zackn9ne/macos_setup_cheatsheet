@@ -71,38 +71,6 @@ sudo sysadminctl -add sysadminctl -secureTokenStatus tracy
 osascript -e 'display alert "Hello World!" message "The reason for this pop-up alert: IT Work In Progress"'
 ```
 
-### dock creation make a python script and chmod +x it (python) #should use mobileconfig
-```
-#!/usr/bin/env python
-import urllib2
-import os
-
-filedata = urllib2.urlopen('https://raw.githubusercontent.com/homebysix/docklib/master/docklib.py')
-datatowrite = filedata.read()
-
-with open('./docklib.py', 'wb') as f:
-    f.write(datatowrite)
-
-
-from docklib import Dock 
-
-def makeDock():
-    tech_dock = [ 
-        '/Applications/Google Chrome.app',
-        '/Applications/Microsoft Excel.app', 
-        '/Applications/Microsoft Word.app', 
-        '/Applications/Microsoft PowerPoint.app', 
-        '/Applications/Slack.app' 
-    ] 
-    dock = Dock() 
-    for item in tech_dock: 
-        if os.path.exists(item): 
-            item = dock.makeDockAppEntry(item) 
-            dock.items['persistent-apps'].append(item) 
-            dock.save() 
-
-makeDock()
-```
 
 ### microsoft (python) (installer) (run as user with admin priveledges, eg sudo)
 ```
