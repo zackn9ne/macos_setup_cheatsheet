@@ -36,9 +36,8 @@ scutil --set LocalHostName "$HWNAME"
 dscacheutil -flushcache
 ```
 
-### user creation (sysadminctl) #need help with these
+### user creation (sysadminctl)https://github.com/gregneagle/pycreateuserpkg
 
-#### via createuserpackage.py
 ```
 #get the script (if this errors, download the developer command line tools).
 git clone https://github.com/gregneagle/pycreateuserpkg.git
