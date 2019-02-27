@@ -88,7 +88,9 @@ os.system('sudo installer -pkg ./msupdater.pkg -target /')
 os.system('cd /Library/Application\ Support/Microsoft/MAU2.0/Microsoft\ AutoUpdate.app/Contents/MacOS && ./msupdate --install')
 ```
 
-### slack (python)
+### install apps with autopkg https://github.com/autopkg/autopkg
+
+### ..but if you have to script.. slack (python)
 ```
 #!/usr/bin/env python
 import urllib2
