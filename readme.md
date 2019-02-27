@@ -15,6 +15,12 @@ ioreg -r -k AppleClamshellState -d 4 | grep AppleClamshellState  | head -1
 curl -O https://raw.githubusercontent.com/moofit/Config_Profiles/master/Google%20Chrome%20-%20Suppress%20First%20Run.mobileconfig
 ```
 
+### printing
+```
+sudo cat /etc/cups/printers.conf | grep MakeModel
+lpinfo --make-and-model "$yourPrinterMakeModel" -m
+```
+
 ### installmacos.py
 ```
 curl -o install.py https://raw.githubusercontent.com/munki/macadmin-scripts/master/installinstallmacos.py
