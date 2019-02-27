@@ -17,8 +17,8 @@ curl -O https://raw.githubusercontent.com/moofit/Config_Profiles/master/Google%2
 
 ### printing
 ```
-sudo cat /etc/cups/printers.conf | grep MakeModel
-lpinfo --make-and-model "$yourPrinterMakeModel" -m
+CURRENTPRNTR=`sudo cat /etc/cups/printers.conf | grep MakeModel | cut -c11-`
+lpinfo --make-and-model "$CURRENTPRNTR" -m
 ```
 
 ### installmacos.py
