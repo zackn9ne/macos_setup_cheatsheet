@@ -22,8 +22,9 @@ sudo fdesetup disable
 curl -O https://raw.githubusercontent.com/moofit/Config_Profiles/master/Google%20Chrome%20-%20Suppress%20First%20Run.mobileconfig
 ```
 
-### printing
+### install printer using lpinfo
 ```
+#install drivers first
 CURRENTPRNTR=`sudo cat /etc/cups/printers.conf | grep MakeModel | cut -c11-`
 lpinfo --make-and-model "$CURRENTPRNTR" -m
 
