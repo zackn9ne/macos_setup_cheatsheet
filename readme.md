@@ -78,13 +78,8 @@ cd pycreateuserpkg
 ./createuserpkg -a -u 900 -n "mac"  -p mac -V 1 -i  com.twocanoes.mds.createuser /tmp/User.pkg
 ```
 
+### user manipulation
 ```
-#!/bin/sh
-ACN="buser"
-FN="Bob User"
-PW="password"
-sudo sysadminctl -addUser "$ACN" -fullName $FN -password "$PW"
-# extra below
 ## is user admin
 sudo dscl . -append /groups/admin GroupMembership "$ACN"
 sudo sysadminctl -deleteUser floater
