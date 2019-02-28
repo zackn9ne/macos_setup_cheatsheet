@@ -13,6 +13,9 @@ ioreg -r -k AppleClamshellState -d 4 | grep AppleClamshellState  | head -1
 ### filevault commands
 ```
 diskutil cs list | grep 'Conversion Progress'
+### or... wait check status with command emulation
+while :; do clear; diskutil cs list | grep 'Conversion Progress'; sleep 2; done
+
 fdesetup status
 sudo fdesetup disable
 ```
