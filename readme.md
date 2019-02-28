@@ -59,7 +59,7 @@ python dockv2.py
 ### hostname (scutil)
 ```
 #!/bin/sh
-HWNAME="The-host-name"
+HWNAME="The-host-name" #NO SPACES ALLOWED
 scutil --set ComputerName "$HWNAME"
 scutil --set LocalHostName "$HWNAME"
 dscacheutil -flushcache
