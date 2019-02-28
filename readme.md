@@ -27,8 +27,11 @@ lpadmin -p $MODEL \
 
 ### installmacos.py
 ```
-curl -o install.py https://raw.githubusercontent.com/munki/macadmin-scripts/master/installinstallmacos.py
-sudo python install.py
+sudo curl -o installmacos.py https://raw.githubusercontent.com/munki/macadmin-scripts/master/installinstallmacos.py
+sudo python installmacos.py
+## or if coming from an older version the catalogurl might have to be spec'd
+sudo python installmacos.py -catalogurl https://swscan.apple.com/content/catalogs/others/index-10.13-10.12-10.11-10.10-10.9-mountainlion-lion-snowleopard-leopard.merged-1.sucatalog
+
 ## do user interaction, wait for download, then...
 hdiutil attach ./Install_macOS_10.14.3-18D109.dmg 
 ```
