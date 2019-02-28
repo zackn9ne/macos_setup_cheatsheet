@@ -1,6 +1,6 @@
 This is to drop into a terminal to setup macos
 
-### swiss-army-knife mojave edition
+### misc helpful commands
 ```
 sudo pkill loginwindow #logs you out eg, xdg-logout gnome-session-quit
 dscacheutil -q group -a name admin #list only admin users
@@ -8,6 +8,13 @@ pmset noidle #no idle
 dscl . list /Users | grep -v '_' # list created users
 softwareupdate -i -a --restart
 ioreg -r -k AppleClamshellState -d 4 | grep AppleClamshellState  | head -1
+```
+
+### filevault commands
+```
+diskutil cs list | grep 'Conversion Progress'
+fdesetup status
+sudo fdesetup disable
 ```
 
 ### mobileconfig to supress chrome 1strun
