@@ -81,6 +81,10 @@ cd pycreateuserpkg
 #this will create an admin user named "mac" with password "mac" with a package version "1" and a package identifier com.twocanoes.mds.createuser and save it to a package called User.pkg in /tmp. Don't worry too much about the version and identifier, just use reasonable values.
 #The UID should be something >500, since macOS starts creating users around there. I usually start at 900. 
 ./createuserpkg -a -u 900 -n "mac"  -p mac -V 1 -i  com.twocanoes.mds.createuser /tmp/User.pkg
+
+#regular user create a pkg
+./createuserpkg -u 900 -n "carolinet" -f "Caroline User" -p "secretpass" -V 1 -i com.company.net.createuser /tmp/Carolineu.pkg
+
 ```
 
 ### user manipulation
