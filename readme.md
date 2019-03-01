@@ -56,7 +56,7 @@ python dockv2.py
 
 ```
 
-### hostname (scutil)
+### change hostname
 ```
 #!/bin/sh
 echo "Please enter your desired hostname NO SPACES ALLOWED, use dash"
