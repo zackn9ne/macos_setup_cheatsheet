@@ -59,10 +59,12 @@ python dockv2.py
 ### hostname (scutil)
 ```
 #!/bin/sh
-HWNAME="The-host-name" #NO SPACES ALLOWED
+echo "Please enter your desired hostname NO SPACES ALLOWED, use dash"
+read HWNAME
 scutil --set ComputerName "$HWNAME"
 scutil --set LocalHostName "$HWNAME"
 dscacheutil -flushcache
+
 ```
 
 ### user creation (sysadminctl)https://github.com/gregneagle/pycreateuserpkg
