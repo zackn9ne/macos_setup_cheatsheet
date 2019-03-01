@@ -58,6 +58,10 @@ python dockv2.py
 
 ### change hostname
 ```
+curl -O https://gist.githubusercontent.com/zackn9ne/c7d3a41ed939567d6e4dae8e7b40c48d/raw/ce4804d317975b1f4ccac520d50ae2d383ed4c08/hostname.sh
+```
+or
+```
 #!/bin/sh
 echo "Please enter your desired hostname NO SPACES ALLOWED, use dash"
 read HWNAME
