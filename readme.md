@@ -10,6 +10,11 @@ softwareupdate -i -a --restart
 ioreg -r -k AppleClamshellState -d 4 | grep AppleClamshellState  | head -1
 ```
 
+### crazy tricks resources links
+```
+https://twocanoes.com/12-customizations-for-the-mojave-macos-login-window-that-you-didnt-know-about/
+```
+
 ### filevault commands
 ```
 diskutil cs list | grep 'Conversion Progress'
