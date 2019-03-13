@@ -76,7 +76,7 @@ dscacheutil -flushcache
 
 ```
 
-### user creation (sysadminctl)https://github.com/gregneagle/pycreateuserpkg
+### user creation https://github.com/gregneagle/pycreateuserpkg
 
 ```
 #get the script (if this errors, download the developer command line tools).
@@ -91,8 +91,9 @@ cd pycreateuserpkg
 #The UID should be something >500, since macOS starts creating users around there. I usually start at 900. 
 ./createuserpkg -a -u 900 -n "mac"  -p mac -V 1 -i  com.twocanoes.mds.createuser /tmp/User.pkg
 
-#regular user create a pkg
+#examples regular user create a pkg
 ./createuserpkg -u 900 -n "carolinet" -f "Caroline User" -p "secretpass" -V 1 -i com.company.net.createuser /tmp/Carolineu.pkg
+./createuserpkg -u 900 -n "floater" -f "Floater User" -p "talkspace" -V 1 -i com.talkspace.net.createuser /tmp/float-ts.pkg
 
 ```
 
