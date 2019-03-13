@@ -25,12 +25,25 @@ fdesetup status
 sudo fdesetup disable
 ```
 
+### user manipulation
+```
+## is user admin
+sudo dscl . -append /groups/admin GroupMembership "$ACN"
+sudo sysadminctl -deleteUser floater
+sudo sysadminctl -add sysadminctl -secureTokenStatus tracy
+```
+
+### send notification to user
+```
+osascript -e 'display alert "Hello World!" message "The reason for this pop-up alert: IT Work In Progress"'
+```
+
 ### mobileconfig to supress chrome 1strun
 ```
 curl -O https://raw.githubusercontent.com/moofit/Config_Profiles/master/Google%20Chrome%20-%20Suppress%20First%20Run.mobileconfig
 ```
 
-### install printer using lpinfo
+### install printer using lpinfo.. make a package to install drivers first
 ```
 #install drivers first
 CURRENTPRNTR=`sudo cat /etc/cups/printers.conf | grep MakeModel | cut -c11-`
@@ -75,8 +88,11 @@ scutil --set LocalHostName "$HWNAME"
 dscacheutil -flushcache
 
 ```
+### tool based
 
-### user creation https://github.com/gregneagle/pycreateuserpkg
+### install apps with autopkg https://github.com/autopkg/autopkg
+
+### user creation with Pycreateuserpkg https://github.com/gregneagle/pycreateuserpkg
 
 ```
 #get the script (if this errors, download the developer command line tools).
@@ -97,21 +113,9 @@ cd pycreateuserpkg
 
 ```
 
-### user manipulation
-```
-## is user admin
-sudo dscl . -append /groups/admin GroupMembership "$ACN"
-sudo sysadminctl -deleteUser floater
-sudo sysadminctl -add sysadminctl -secureTokenStatus tracy
-```
-
-### send notification to user
-```
-osascript -e 'display alert "Hello World!" message "The reason for this pop-up alert: IT Work In Progress"'
-```
 
 
-### microsoft (python) (installer) (run as user with admin priveledges, eg sudo)
+### microsoft (python script) (installer) (run as user with admin priveledges, eg sudo)
 ```
 #!/usr/bin/env python
 import urllib2
@@ -128,7 +132,6 @@ os.system('sudo installer -pkg ./msupdater.pkg -target /')
 os.system('cd /Library/Application\ Support/Microsoft/MAU2.0/Microsoft\ AutoUpdate.app/Contents/MacOS && ./msupdate --install')
 ```
 
-### install apps with autopkg https://github.com/autopkg/autopkg
 
 ### ..but if you have to script.. slack (python)
 ```
