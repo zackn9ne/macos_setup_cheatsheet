@@ -93,7 +93,7 @@ cd pycreateuserpkg
 
 #examples regular user create a pkg
 ./createuserpkg -u 900 -n "carolinet" -f "Caroline User" -p "secretpass" -V 1 -i com.company.net.createuser /tmp/Carolineu.pkg
-./createuserpkg -u 900 -n "floater" -f "Floater User" -p "talkspace" -V 1 -i com.talkspace.net.createuser /tmp/float-ts.pkg
+./createuserpkg -u 900 -n "floater" -f "Floater User" -p "coolnewstartup" -V 1 -i com.coolnewstartup.net.createuser /tmp/float-coolnewstartup.pkg
 
 ```
 
