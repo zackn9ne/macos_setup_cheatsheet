@@ -11,7 +11,7 @@ ioreg -r -k AppleClamshellState -d 4 | grep AppleClamshellState  | head -1
 ```
 
 ### crazy tricks resources links
-*login screen helps: https://twocanoes.com/12-customizations-for-the-mojave-macos-login-window-that-you-didnt-know-about/
+* login screen helps: https://twocanoes.com/12-customizations-for-the-mojave-macos-login-window-that-you-didnt-know-about/
 * how to setup crontab on macos: https://alvinalexander.com/mac-os-x/mac-osx-startup-crontab-launchd-jobs
 
 
