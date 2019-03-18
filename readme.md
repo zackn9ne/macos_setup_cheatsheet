@@ -22,14 +22,20 @@ kextstat | grep -v com.apple
 
 ### filevault commands
 ```
+## check fv status
 diskutil cs list | grep 'Conversion Progress'
-### or... wait check status with command emulation
+
+### check fv status live update eg or... wait check status with command emulation
 while :; do clear; diskutil cs list | grep 'Conversion Progress'; sleep 2; done
 
+## can user unlock filevault
+sudo sysadminctl -add sysadminctl -secureTokenStatus tracy
+
+## troubleshooting a failed filevault
 fdesetup status
 sudo fdesetup disable
 
-##add user to filevault
+##add user to filevault unlock list
 sudo fdesetup add -usertoadd username
 
 ```
@@ -38,8 +44,9 @@ sudo fdesetup add -usertoadd username
 ```
 ## is user admin
 sudo dscl . -append /groups/admin GroupMembership "$ACN"
+
+## delete user
 sudo sysadminctl -deleteUser floater
-sudo sysadminctl -add sysadminctl -secureTokenStatus tracy
 
 ## reset a users pw
 /usr/bin/dscl . -passwd /Users/someadmin $ome$ecret!
