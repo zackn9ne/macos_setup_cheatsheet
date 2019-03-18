@@ -28,6 +28,10 @@ while :; do clear; diskutil cs list | grep 'Conversion Progress'; sleep 2; done
 
 fdesetup status
 sudo fdesetup disable
+
+##add user to filevault
+sudo fdesetup add -usertoadd username
+
 ```
 
 ### user manipulation
