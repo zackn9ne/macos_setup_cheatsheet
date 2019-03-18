@@ -63,6 +63,7 @@ sudo python installmacos.py -catalogurl https://swscan.apple.com/content/catalog
 
 ## do user interaction, wait for download, then...
 hdiutil attach ./Install_macOS_10.14.3-18D109.dmg 
+open ./Install_macOS_10.14.3-18D109.dmg 
 ```
 
 ### make dock icons! dependant on https://github.com/homebysix/docklib
