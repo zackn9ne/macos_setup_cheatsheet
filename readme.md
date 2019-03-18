@@ -29,7 +29,7 @@ diskutil cs list | grep 'Conversion Progress'
 while :; do clear; diskutil cs list | grep 'Conversion Progress'; sleep 2; done
 
 ## can user unlock filevault
-sudo sysadminctl -add sysadminctl -secureTokenStatus tracy
+sysadminctl -secureTokenStatus tracy
 
 ## troubleshooting a failed filevault
 fdesetup status
