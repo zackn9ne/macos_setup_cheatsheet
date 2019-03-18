@@ -40,6 +40,9 @@ sudo fdesetup add -usertoadd username
 sudo dscl . -append /groups/admin GroupMembership "$ACN"
 sudo sysadminctl -deleteUser floater
 sudo sysadminctl -add sysadminctl -secureTokenStatus tracy
+
+## reset a users pw
+/usr/bin/dscl . -passwd /Users/someadmin $ome$ecret!
 ```
 
 ### send notification to user
