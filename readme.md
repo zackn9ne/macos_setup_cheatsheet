@@ -10,15 +10,21 @@ softwareupdate -i -a --restart
 ioreg -r -k AppleClamshellState -d 4 | grep AppleClamshellState  | head -1
 ```
 
+### tools area
+```
+autopkg tut: https://grahamgilbert.com/blog/2014/06/30/making-packages-with-autopkg/
+```
+
 ### kext
 ```
 kextstat | grep -v com.apple
 ```
 
-### stupid mac tricks
-* login screen helps: https://twocanoes.com/12-customizations-for-the-mojave-macos-login-window-that-you-didnt-know-about/
-* how to setup crontab on macos: https://alvinalexander.com/mac-os-x/mac-osx-startup-crontab-launchd-jobs
-
+### stupid mac tricks (links)
+```
+login screen helps: https://twocanoes.com/12-customizations-for-the-mojave-macos-login-window-that-you-didnt-know-about/
+how to setup crontab on macos: https://alvinalexander.com/mac-os-x/mac-osx-startup-crontab-launchd-jobs
+```
 
 ### filevault commands
 ```
