@@ -77,6 +77,10 @@ sudo fdesetup disable
 ##add user to filevault unlock list
 sudo fdesetup add -usertoadd username
 
+## filevault spare tires
+sudo fdesetup list
+sudo diskutil apfs updatePreboot /
+
 ```
 
 ### user manipulation
