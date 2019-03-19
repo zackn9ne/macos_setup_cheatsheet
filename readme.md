@@ -8,6 +8,7 @@ pmset noidle #no idle
 dscl . list /Users | grep -v '_' # list created users
 softwareupdate -i -a --restart
 ioreg -r -k AppleClamshellState -d 4 | grep AppleClamshellState  | head -1
+sudo installer -pkg /path/to/package.pkg -target /
 ```
 
 ### autopkg area
