@@ -112,7 +112,7 @@ lpadmin -p $MODEL \
 -o StringBeforeEqualsSign=ValueAfterColon #found on lpoptions -l pRiNtErNaMe -t
 ```
 
-### installmacos.py
+### installmacos.py area
 ```
 sudo curl -o installmacos.py https://raw.githubusercontent.com/munki/macadmin-scripts/master/installinstallmacos.py
 sudo python installmacos.py
@@ -147,11 +147,8 @@ scutil --set LocalHostName "$HWNAME"
 dscacheutil -flushcache
 
 ```
-### tool based
 
-### install apps with autopkg https://github.com/autopkg/autopkg
-
-### user creation with Pycreateuserpkg https://github.com/gregneagle/pycreateuserpkg
+### Pycreateuserpkg area https://github.com/gregneagle/pycreateuserpkg
 
 ```
 #get the script (if this errors, download the developer command line tools).
