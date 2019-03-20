@@ -26,6 +26,11 @@ autopkg run GoogleChrome.pkg
 
 ```
 
+### erase all the apple apps one liner
+```
+rm -rf /Applications/Numbers.app/; rm -rf /Applications/Pages.app; rm -rf /Applications/iMovie.app; rm -rf /Applications/Keynote.app; rm -rf /Applications/GarageBand.app
+```
+
 ### munki area
 ```
 SERVER="1.2.3.4."
