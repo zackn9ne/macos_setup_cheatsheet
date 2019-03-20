@@ -11,6 +11,11 @@ ioreg -r -k AppleClamshellState -d 4 | grep AppleClamshellState  | head -1
 sudo installer -pkg /path/to/package.pkg -target /
 ```
 
+### is mac bound to ad
+```
+dsconfigad -show | awk '/Active Directory Domain/{print $NF}'
+```
+
 ### autopkg area
 ```
 autopkg tut: https://grahamgilbert.com/blog/2014/06/30/making-packages-with-autopkg/
