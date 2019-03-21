@@ -145,6 +145,9 @@ open ./Install_macOS_10.14.3-18D109.dmg
 #!/bin/sh
 killall cfprefsd
 killall Dock
+
+#if these don't work try v
+rm $HOME/Library/Preferences/com.apple.Dock.plist; killall cfprefsd; killall Dock
 ```
 
 ### Dock Icons dependant on https://github.com/homebysix/docklib
