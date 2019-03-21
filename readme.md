@@ -60,6 +60,8 @@ rsync -avzh /Users/shared/munki_repo root@$SERVER:/var/www/html
 ### kext
 ```
 kextstat | grep -v com.apple
+
+Because xyz requires kexts to be installed, you will need to configure an MDM Profile and MDM Configuration for Kernel Extension Whitelist to bypass the user dialog that is normally required to approve a kext. 
 ```
 
 ### stupid mac tricks (links)
