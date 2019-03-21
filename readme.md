@@ -3,9 +3,7 @@ This is to drop into a terminal to setup macos
 ### misc helpful commands
 ```
 sudo pkill loginwindow #logs you out eg, xdg-logout gnome-session-quit
-dscacheutil -q group -a name admin #list only admin users
 pmset noidle #no idle
-dscl . list /Users | grep -v '_' # list created users
 softwareupdate -i -a --restart
 ioreg -r -k AppleClamshellState -d 4 | grep AppleClamshellState  | head -1
 sudo installer -pkg /path/to/package.pkg -target /
@@ -94,9 +92,13 @@ sudo diskutil apfs updatePreboot /
 
 ```
 
-### user manipulation
+### user tools
 ```
+dscl . list /Users | grep -v '_' # list created users
+
 ## is user admin
+dscacheutil -q group -a name admin #list only admin users
+
 sudo dscl . -append /groups/admin GroupMembership "$ACN"
 
 ## delete user
