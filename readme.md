@@ -61,7 +61,9 @@ rsync -avzh /Users/shared/munki_repo root@$SERVER:/var/www/html
 ```
 kextstat | grep -v com.apple
 
-Because xyz requires kexts to be installed, you will need to configure an MDM Profile and MDM Configuration for Kernel Extension Whitelist to bypass the user dialog that is normally required to approve a kext. 
+With the advent of macOS 10.13 High Sierra, Apple introduced User Approved Kernel Extension Loading (UAKEL). This means that kernel extensions (also called kexts or security extensions) must be approved before they can be installed...
+
+...Because xyz requires kexts to be installed, you will need to configure an MDM Profile and MDM Configuration for Kernel Extension Whitelist to bypass the user dialog that is normally required to approve a kext. 
 ```
 
 ### stupid mac tricks (links)
