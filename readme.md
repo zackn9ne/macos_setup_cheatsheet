@@ -7,6 +7,7 @@ pmset noidle #no idle
 softwareupdate -i -a --restart
 ioreg -r -k AppleClamshellState -d 4 | grep AppleClamshellState  | head -1
 sudo installer -pkg /path/to/package.pkg -target /
+rm /var/db/.applesetupdone #will ask to create user account on next boot with GUI
 ```
 
 ### is mac bound to ad
