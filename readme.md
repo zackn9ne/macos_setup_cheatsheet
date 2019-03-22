@@ -120,7 +120,7 @@ osascript -e 'display alert "Hello World!" message "The reason for this pop-up a
 
 ### mobileconfig to supress chrome 1strun
 ```
-curl -O https://raw.githubusercontent.com/moofit/Config_Profiles/master/Google%20Chrome%20-%20Suppress%20First%20Run.mobileconfig
+curl -o firstchrome.mobileconfig  https://raw.githubusercontent.com/moofit/Config_Profiles/master/Google%20Chrome%20-%20Suppress%20First%20Run.mobileconfig && open firstchrome.mobileconfig
 ```
 
 ### install printer using lpinfo.. make a package to install drivers first
