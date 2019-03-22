@@ -116,6 +116,7 @@ sudo sysadminctl -deleteUser floater
 ### send notification to user
 ```
 osascript -e 'display alert "Hello World!" message "The reason for this pop-up alert: IT Work In Progress"'
+osascript -e 'display alert "Hello World!" message "Leave open and plugged in: Automated installs in progress"'
 ```
 
 ### mobileconfig to supress chrome 1strun
