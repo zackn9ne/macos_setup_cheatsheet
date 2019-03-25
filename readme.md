@@ -61,6 +61,7 @@ rsync -avzh /Users/shared/munki_repo root@$SERVER:/var/www/html
 managedsoftwareupdate
 or
 managedsoftwareupdate -vvv # or it didn't happen
+cat /Library/Managed Installs/Logs/ManagedSoftwareUpdate.log # can also be helpful.
 
 ```
 
