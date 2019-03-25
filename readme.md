@@ -58,7 +58,6 @@ autopkg run -v GoogleChrome.munki MakeCatalogs.munki #adds google chrome and ess
 rsync -avzh /Users/shared/munki_repo root@$SERVER:/var/www/html
 
 #client side where's my apps
-```
 managedsoftwareupdate
 or
 managedsoftwareupdate -vvv # or it didn't happen
