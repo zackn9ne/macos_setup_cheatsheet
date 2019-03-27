@@ -15,13 +15,13 @@ rm /var/db/.applesetupdone #will ask to create user account on next boot with GU
 dsconfigad -show | awk '/Active Directory Domain/{print $NF}'
 ```
 
-### autopkg area
+### autopkg area additional tut: https://grahamgilbert.com/blog/2014/06/30/making-packages-with-autopkg/
 ```
-autopkg tut: https://grahamgilbert.com/blog/2014/06/30/making-packages-with-autopkg/
-
-#autopkg vanilla installs run and end up in
-autopkg run GoogleChrome.pkg
-/Library/AutoPkg/Cache/com.github.autopkg.pkg.googlechrome/
+1. download and install autopkg
+2. autopkg repo-add https://github.com/autopkg/recipes
+3. autopkg list-recipes | grep Excel
+4. autopkg run MicrosoftExcel2016.install
+5. pkg's end up in /Library/AutoPkg/Cache/
 
 ```
 
