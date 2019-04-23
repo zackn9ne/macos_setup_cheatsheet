@@ -117,7 +117,7 @@ sudo dscl . -append /groups/admin GroupMembership "$ACN"
 sudo sysadminctl -deleteUser floater
 
 ## reset a users pw
-/usr/bin/dscl . -passwd /Users/someadmin $ome$ecret!
+/usr/bin/dscl . -passwd /Users/someadmin "$ome$ecret!" #run as root to not require existing pw, escape pw with quotes if special chars
 ```
 
 ### send notification to user
