@@ -10,6 +10,13 @@ sudo installer -pkg /path/to/package.pkg -target /
 rm /var/db/.applesetupdone #will ask to create user account on next boot with GUI #you have to be onsite and boot into single user mode
 ```
 
+### monitor traffic with nettop (mini tutorial)
+```
+nettop
+- press h to bring up help menu
+- press e to toggle delta traffic (traffic since load v. current thoroughput)
+```
+
 ### is mac bound to ad
 ```
 dsconfigad -show | awk '/Active Directory Domain/{print $NF}'
