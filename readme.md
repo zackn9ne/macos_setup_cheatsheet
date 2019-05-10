@@ -15,6 +15,7 @@ rm /var/db/.applesetupdone #will ask to create user account on next boot with GU
 nettop
 - press h to bring up help menu
 - press e to toggle delta traffic (traffic since load v. current thoroughput)
+- press p to bring up a process selection ncurses type menu
 ```
 
 ### is mac bound to ad
