@@ -6,7 +6,7 @@ text returned of (display dialog "Please enter your desired hostname: (Use dashe
 end tell
 EOD)
 
-#HWNAME="NY-iMac-SomeBody"
+read -p "Enter Your Hostname eg. NY-iMac-SomeBody: "  HWNAME
 sudo scutil --set HostName "$HWNAME"
 sudo scutil --set ComputerName "$HWNAME"
 sudo scutil --set LocalHostName "$HWNAME"
