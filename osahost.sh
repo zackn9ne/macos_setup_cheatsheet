@@ -6,6 +6,8 @@ text returned of (display dialog "Please enter your desired hostname: (Use dashe
 end tell
 EOD)
 
-scutil --set ComputerName "$HWNAME"
-scutil --set LocalHostName "$HWNAME"
+#HWNAME="NY-iMac-SomeBody"
+sudo scutil --set HostName "$HWNAME"
+sudo scutil --set ComputerName "$HWNAME"
+sudo scutil --set LocalHostName "$HWNAME"
 dscacheutil -flushcache
