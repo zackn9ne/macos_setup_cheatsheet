@@ -38,6 +38,12 @@ dsconfigad -show | awk '/Active Directory Domain/{print $NF}'
 rm -rf /Applications/Numbers.app/; rm -rf /Applications/Pages.app; rm -rf /Applications/iMovie.app; rm -rf /Applications/Keynote.app; rm -rf /Applications/GarageBand.app
 ```
 
+### rename computers in a less annoying way
+```
+curl -O https://raw.githubusercontent.com/zackn9ne/macos_setup_cheatsheet/master/host-name-changer.sh
+sh host-name-changer.sh
+```
+
 ### munki area
 ```
 SERVER="1.2.3.4."
