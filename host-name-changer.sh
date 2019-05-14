@@ -10,7 +10,7 @@ echo "your new hostname is..."
 hostname
 
 while true; do
-    read -p "Do you wish to delete this program?" yn
+    read -p "Do you wish to delete this program off the disk?" yn
     case $yn in
         [Yy]* ) rm host-name-changer.sh; break;;
         [Nn]* ) exit;;
