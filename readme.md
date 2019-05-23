@@ -38,7 +38,7 @@ dsconfigad -show | awk '/Active Directory Domain/{print $NF}'
 rm -rf /Applications/Numbers.app/; rm -rf /Applications/Pages.app; rm -rf /Applications/iMovie.app; rm -rf /Applications/Keynote.app; rm -rf /Applications/GarageBand.app
 ```
 
-### rename computers in a less annoying way
+### rename computers in a less annoying way zackn9nez hoStnamE ChanGeR ScRiPT
 ```
 curl -O https://raw.githubusercontent.com/zackn9ne/macos_setup_cheatsheet/master/host-name-changer.sh
 sh host-name-changer.sh
@@ -184,11 +184,6 @@ curl -O https://raw.githubusercontent.com/homebysix/docklib/4f3e173367f24b034c60
 curl -O https://gist.githubusercontent.com/zackn9ne/8183cd12667fb04a24972649685ec9a1/raw/9748a422f8b77067e4af3520aa9dc512febc04bb/dockv2.py
 python dockv2.py
 
-```
-
-### change hostname script takes userinput
-```
-curl https://raw.githubusercontent.com/zackn9ne/macos_setup_cheatsheet/master/osahost.sh | sudo bash
 ```
 
 
