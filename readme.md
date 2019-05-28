@@ -180,9 +180,16 @@ rm $HOME/Library/Preferences/com.apple.Dock.plist; killall cfprefsd; killall Doc
 ### Dock Icons dependant on https://github.com/homebysix/docklib
 ```
 #!/bin/sh
+echo "downloading library..."
 curl -O https://raw.githubusercontent.com/homebysix/docklib/4f3e173367f24b034c60092472c9523d8c7ddfca/docklib.py
-curl -O https://gist.githubusercontent.com/zackn9ne/8183cd12667fb04a24972649685ec9a1/raw/9748a422f8b77067e4af3520aa9dc512febc04bb/dockv2.py
-python dockv2.py
+echo "downloading script..."
+curl -O https://raw.githubusercontent.com/zackn9ne/macos_setup_cheatsheet/master/dock.py
+echo "cleaning dock..."
+killall cfprefsd
+killall Dock
+rm $HOME/Library/Preferences/com.apple.Dock.plist; killall cfprefsd; killall Dock
+echo "creating dock..."
+python dock.py
 
 ```
 
