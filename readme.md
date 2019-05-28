@@ -184,10 +184,6 @@ echo "downloading library..."
 curl -O https://raw.githubusercontent.com/homebysix/docklib/4f3e173367f24b034c60092472c9523d8c7ddfca/docklib.py
 echo "downloading script..."
 curl -O https://raw.githubusercontent.com/zackn9ne/macos_setup_cheatsheet/master/dock.py
-echo "cleaning dock..."
-killall cfprefsd
-killall Dock
-rm $HOME/Library/Preferences/com.apple.Dock.plist; killall cfprefsd; killall Dock
 echo "creating dock..."
 python dock.py
 
