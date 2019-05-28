@@ -1,4 +1,7 @@
 #!/bin/sh
+killall cfprefsd
+killall Dock
+rm $HOME/Library/Preferences/com.apple.Dock.plist; killall cfprefsd; killall Dock
 
 import os
 from docklib import Dock 
