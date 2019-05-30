@@ -168,10 +168,10 @@ hdiutil attach ./Install_macOS_10.14.3-18D109.dmg
 open ./Install_macOS_10.14.3-18D109.dmg 
 
 ## do stuff
-sudo /Applications/Install\macOS\ Mojave.app --agreetolicense --eraseinstall --newvolumename "Macintosh HD" --nointeraction
+sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/startosinstall --agreetolicense --eraseinstall --newvolumename "Macintosh HD" --nointeraction
 
 ## do in place upgrade
-sudo /Applications/Install\macOS\ Mojave.app --agreetolicense --nointeraction
+sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/startosinstall --agreetolicense --nointeraction
 
 ```
 ### Reset Dock
