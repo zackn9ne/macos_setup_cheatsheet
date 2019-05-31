@@ -156,7 +156,7 @@ lpadmin -p $MODEL \
 -o StringBeforeEqualsSign=ValueAfterColon #found on lpoptions -l pRiNtErNaMe -t
 ```
 
-### installmacos.py area
+### Download MacOS Installers, run them via command line
 ```
 sudo curl -o installmacos.py https://raw.githubusercontent.com/munki/macadmin-scripts/master/installinstallmacos.py
 sudo python installmacos.py
