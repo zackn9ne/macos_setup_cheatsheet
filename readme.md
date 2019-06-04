@@ -10,6 +10,11 @@ sudo installer -pkg /path/to/package.pkg -target /
 rm /var/db/.applesetupdone #will ask to create user account on next boot with GUI #you have to be onsite and boot into single user mode
 ```
 
+### crash logs directory
+```
+~/Library/Logs/DiagnosticReports/ 
+```
+
 ### monitor traffic with nettop (mini tutorial)
 ```
 nettop
