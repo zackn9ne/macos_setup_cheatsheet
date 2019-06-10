@@ -1,5 +1,11 @@
 This is to drop into a terminal to setup macos
 
+### rename computers with zackn9nez hoStnamE ChanGeR ScRiPT :computer:
+
+```
+curl -O https://raw.githubusercontent.com/zackn9ne/macos_setup_cheatsheet/master/host-name-changer.sh && sh host-name-changer.sh
+```
+
 ### misc helpful commands
 ```
 sudo pkill loginwindow #logs you out eg, xdg-logout gnome-session-quit
@@ -43,11 +49,7 @@ dsconfigad -show | awk '/Active Directory Domain/{print $NF}'
 rm -rf /Applications/Numbers.app/; rm -rf /Applications/Pages.app; rm -rf /Applications/iMovie.app; rm -rf /Applications/Keynote.app; rm -rf /Applications/GarageBand.app
 ```
 
-### rename computers in a less annoying way zackn9nez hoStnamE ChanGeR ScRiPT
-```
-curl -O https://raw.githubusercontent.com/zackn9ne/macos_setup_cheatsheet/master/host-name-changer.sh
-sh host-name-changer.sh
-```
+
 
 ### munki area
 ```
