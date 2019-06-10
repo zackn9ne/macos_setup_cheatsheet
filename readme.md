@@ -6,35 +6,40 @@ This is to drop into a terminal to setup macos
 curl -O https://raw.githubusercontent.com/zackn9ne/macos_setup_cheatsheet/master/host-name-changer.sh && sh host-name-changer.sh
 ```
 
-### misc helpful commands
+### log any user out :door:
+
 ```
 sudo pkill loginwindow #logs you out eg, xdg-logout gnome-session-quit
-pmset noidle #no idle
-softwareupdate -i -a --restart
-ioreg -r -k AppleClamshellState -d 4 | grep AppleClamshellState  | head -1
-sudo installer -pkg /path/to/package.pkg -target /
+```
+
+### erase all the apple apps one liner :trash:
+```
+rm -rf /Applications/Numbers.app/; rm -rf /Applications/Pages.app; rm -rf /Applications/iMovie.app; rm -rf /Applications/Keynote.app; rm -rf /Applications/GarageBand.app
+```
+
+
+
+### age old macOS backdoor :minidisc:
+
+```
 rm /var/db/.applesetupdone #will ask to create user account on next boot with GUI #you have to be onsite and boot into single user mode
 ```
 
-### crash logs directory
+### crash logs directory :flashlight:
 ```
-~/Library/Logs/DiagnosticReports/ 
+ls ~/Library/Logs/DiagnosticReports/ 
 ```
 
-### monitor traffic with nettop (mini tutorial)
-```
-nettop
-- press h to bring up help menu
-- press e to toggle delta traffic (traffic since load v. current thoroughput)
-- press p to bring up a process selection ncurses type menu
-```
 
 ### is mac bound to ad
 ```
 dsconfigad -show | awk '/Active Directory Domain/{print $NF}'
 ```
 
-### autopkg area additional tut: https://grahamgilbert.com/blog/2014/06/30/making-packages-with-autopkg/
+# Sysadmin Tools I like
+
+### autopkg 
+
 ```
 1. download and install autopkg
 2. autopkg repo-add https://github.com/autopkg/recipes
@@ -44,10 +49,6 @@ dsconfigad -show | awk '/Active Directory Domain/{print $NF}'
 
 ```
 
-### erase all the apple apps one liner
-```
-rm -rf /Applications/Numbers.app/; rm -rf /Applications/Pages.app; rm -rf /Applications/iMovie.app; rm -rf /Applications/Keynote.app; rm -rf /Applications/GarageBand.app
-```
 
 
 
