@@ -49,6 +49,14 @@ dsconfigad -show | awk '/Active Directory Domain/{print $NF}'
 
 ```
 
+### fuxor chrome for a fuxored user
+```
+#!/bin/sh
+sudo pkill chrome
+rm -rf "~/Library/Application Support/Google"
+rm -rf "~/Library/Caches/com.google.Chrome*"
+rm -rf "~/Library/Google"
+```
 
 
 
