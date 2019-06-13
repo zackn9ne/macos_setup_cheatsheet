@@ -12,6 +12,9 @@ curl -O https://raw.githubusercontent.com/zackn9ne/macos_setup_cheatsheet/master
 sudo pkill loginwindow #logs you out eg, xdg-logout gnome-session-quit
 ```
 
+### rebuild spotlight index :flashlight:
+`sudo mdutil -i on /`
+
 ### erase all the apple apps one liner :trash:
 ```
 rm -rf /Applications/Numbers.app/; rm -rf /Applications/Pages.app; rm -rf /Applications/iMovie.app; rm -rf /Applications/Keynote.app; rm -rf /Applications/GarageBand.app
