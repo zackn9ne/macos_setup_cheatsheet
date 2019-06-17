@@ -185,14 +185,18 @@ sudo python installmacos.py --catalogurl https://swscan.apple.com/content/catalo
 ## do user interaction, wait for download, then...
 hdiutil attach ./Install_macOS_10.14.3-18D109.dmg 
 open ./Install_macOS_10.14.3-18D109.dmg 
+```
 
-## do stuff
-sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/startosinstall --agreetolicense --eraseinstall --newvolumename "Macintosh HD" --nointeraction
+### Mojave installer
+## create a mojave installer USB 
+`sudo ~/Downloads/Install\ macOS\ Mojave.app/Contents/Resources/createinstallmedia --volume /Volumes/newdisk`
+
+## erase and reinstall
+`sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/startosinstall --agreetolicense --eraseinstall --newvolumename "Macintosh HD" --nointeraction`
 
 ## do in place upgrade
-sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/startosinstall --agreetolicense --nointeraction
+`sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/startosinstall --agreetolicense --nointeraction`
 
-```
 
 ### cool neat mojave install command line options
 ```
