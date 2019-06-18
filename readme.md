@@ -1,6 +1,6 @@
 This is to drop into a terminal to setup macos
 
-### rename computers with zackn9nez hoStnamE ChanGeR ScRiPT :computer:
+### copy paste and press return to rename computers with zackn9nez hoStnamE ChanGeR ScRiPT :computer:
 
 ```
 curl -O https://raw.githubusercontent.com/zackn9ne/macos_setup_cheatsheet/master/host-name-changer.sh && sh host-name-changer.sh
