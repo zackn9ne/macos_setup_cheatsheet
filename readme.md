@@ -6,6 +6,9 @@ This is to drop into a terminal to setup macos
 curl -O https://raw.githubusercontent.com/zackn9ne/macos_setup_cheatsheet/master/host-name-changer.sh && sh host-name-changer.sh
 ```
 
+### reset a users password (assumes you have root shell, cough, Addigy)
+`/usr/bin/dscl . -passwd /Users/whoami "S3cretStuff"`
+
 ### log any user out :door:
 
 ```
