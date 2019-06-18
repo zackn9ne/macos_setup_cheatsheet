@@ -229,7 +229,7 @@ killall Dock
 rm $HOME/Library/Preferences/com.apple.Dock.plist; killall cfprefsd; killall Dock
 ```
 
-### Dock Icons dependant on https://github.com/homebysix/docklib
+### Copy and Paste all this and press return. Dock Icons uses https://github.com/homebysix/docklib library
 ```
 #!/bin/sh
 echo "downloading library..."
