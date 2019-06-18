@@ -9,6 +9,11 @@ curl -O https://raw.githubusercontent.com/zackn9ne/macos_setup_cheatsheet/master
 ### reset a users password (assumes you have root shell, cough, Addigy or you will need admin priveledges, no FV allowed here)
 `/usr/bin/dscl . -passwd /Users/whoami "S3cretStuff"`
 
+### get logged in user
+```
+loggedInUser=`python -c 'from SystemConfiguration import SCDynamicStoreCopyConsoleUser; import sys; username = (SCDynamicStoreCopyConsoleUser(None, None, None) or [None])[0]; username = [username,""][username in [u"loginwindow", None, u""]]; sys.stdout.write(username + "\n");'`
+```
+
 ### log any user out :door:
 
 ```
