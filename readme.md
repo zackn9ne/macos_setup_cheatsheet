@@ -15,7 +15,7 @@ curl -O https://raw.githubusercontent.com/zackn9ne/macos_setup_cheatsheet/master
 `sudo dseditgroup -o edit -d USERNAME -t user admin`
 
 ### reset a users password (assumes you have root shell, cough, Addigy or you will need admin priveledges, no FV allowed here)
-`/usr/bin/dscl . -passwd /Users/whoami "S3cretStuff"`
+`/usr/bin/dscl . -passwd /Users/USERNAME "N3wPassWorD"`
 
 ### get logged in user
 ```
