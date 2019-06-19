@@ -1,5 +1,7 @@
 This is to drop into a terminal to setup macos
 
+# users and hosnames
+
 ### copy paste and press return to rename computers with zackn9nez hoStnamE ChanGeR ScRiPT :computer:
 
 ```
@@ -20,11 +22,36 @@ curl -O https://raw.githubusercontent.com/zackn9ne/macos_setup_cheatsheet/master
 loggedInUser=`python -c 'from SystemConfiguration import SCDynamicStoreCopyConsoleUser; import sys; username = (SCDynamicStoreCopyConsoleUser(None, None, None) or [None])[0]; username = [username,""][username in [u"loginwindow", None, u""]]; sys.stdout.write(username + "\n");'`
 ```
 
-### log any user out :door:
+### get logged in console user
+`id -un`
+
+### get all users
+`dscl . list /Users | grep -v '_'`
+
+### get admin users
+`dscacheutil -q group -a name admin`
+
+### delete user
+`sudo sysadminctl -deleteUser USERNAME`
+
+### log people out :door:
+
+`sudo pkill loginwindow #logs you out eg, xdg-logout gnome-session-quit`
+
+
+### is mac bound to ad
+```
+dsconfigad -show | awk '/Active Directory Domain/{print $NF}'
+```
+
+
+### reset mac to new status on boot password break in hack :minidisc:
 
 ```
-sudo pkill loginwindow #logs you out eg, xdg-logout gnome-session-quit
+rm /var/db/.applesetupdone #will ask to create user account on next boot with GUI #you have to be onsite and boot into single user mode
 ```
+
+# macos cruft
 
 ### rebuild spotlight index :flashlight:
 `sudo mdutil -i on /`
@@ -34,24 +61,24 @@ sudo pkill loginwindow #logs you out eg, xdg-logout gnome-session-quit
 rm -rf /Applications/Numbers.app/; rm -rf /Applications/Pages.app; rm -rf /Applications/iMovie.app; rm -rf /Applications/Keynote.app; rm -rf /Applications/GarageBand.app
 ```
 
+### open link in chrome
+`open -a "Google Chrome" https://chrome.google.com/webstore/detail/clear-cache/cppjkneekbjaeellbfkmgnhonkkjfpdn?hl=en`
 
-
-### age old macOS backdoor :minidisc:
-
+### fuxor chrome for a fuxored user
 ```
-rm /var/db/.applesetupdone #will ask to create user account on next boot with GUI #you have to be onsite and boot into single user mode
+#!/bin/sh
+sudo pkill chrome
+rm -rf "~/Library/Application Support/Google"
+rm -rf "~/Library/Caches/com.google.Chrome*"
+rm -rf "~/Library/Google"
 ```
+
 
 ### crash logs directory :flashlight:
 ```
 ls ~/Library/Logs/DiagnosticReports/ 
 ```
 
-
-### is mac bound to ad
-```
-dsconfigad -show | awk '/Active Directory Domain/{print $NF}'
-```
 
 # Sysadmin Tools I like
 
@@ -66,14 +93,6 @@ dsconfigad -show | awk '/Active Directory Domain/{print $NF}'
 
 ```
 
-### fuxor chrome for a fuxored user
-```
-#!/bin/sh
-sudo pkill chrome
-rm -rf "~/Library/Application Support/Google"
-rm -rf "~/Library/Caches/com.google.Chrome*"
-rm -rf "~/Library/Google"
-```
 
 
 
@@ -151,21 +170,7 @@ sudo diskutil apfs updatePreboot /
 
 ```
 
-### user tools
-```
-dscl . list /Users | grep -v '_' # list created users
 
-## is user admin
-dscacheutil -q group -a name admin #list only admin users
-
-sudo dscl . -append /groups/admin GroupMembership "$ACN"
-
-## delete user
-sudo sysadminctl -deleteUser floater
-
-## reset a users pw
-/usr/bin/dscl . -passwd /Users/someadmin "$ome$ecret!" #run as root to not require existing pw, escape pw with quotes if special chars
-```
 
 ### send notification to user
 ```
