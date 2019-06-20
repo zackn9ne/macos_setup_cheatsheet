@@ -56,11 +56,6 @@ rm /var/db/.applesetupdone #will ask to create user account on next boot with GU
 ### rebuild spotlight index :flashlight:
 `sudo mdutil -i on /`
 
-### erase all the apple apps one liner :trash:
-```
-rm -rf /Applications/Numbers.app/; rm -rf /Applications/Pages.app; rm -rf /Applications/iMovie.app; rm -rf /Applications/Keynote.app; rm -rf /Applications/GarageBand.app
-```
-
 ### open link in chrome
 `open -a "Google Chrome" https://chrome.google.com/webstore/detail/clear-cache/cppjkneekbjaeellbfkmgnhonkkjfpdn?hl=en`
 
