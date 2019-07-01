@@ -1,5 +1,8 @@
 This is to drop into a terminal to setup macos
 
+# make macOs installers Apple approved terminal method:
+https://support.apple.com/hr-hr/HT201372
+
 # users and hosnames
 
 ### copy paste and press return to rename computers with zackn9nez hoStnamE ChanGeR ScRiPT :computer:
