@@ -1,7 +1,10 @@
 This is to drop into a terminal to setup macos
 
-# make macOs installers Apple approved terminal method:
+# make macOs USB installers Apple approved terminal method:
 https://support.apple.com/hr-hr/HT201372
+
+# install pkg's
+`sudo installer -pkg /path/to/package.pkg -target /`
 
 # users and hosnames
 
