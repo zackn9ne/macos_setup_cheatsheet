@@ -1,6 +1,6 @@
 This is to drop into a terminal to setup macos
 
-# make macOs USB installers Apple approved terminal method:
+# make macOs USB installers Instructions
 https://support.apple.com/hr-hr/HT201372
 
 # install pkg's
