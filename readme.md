@@ -14,24 +14,26 @@ https://support.apple.com/hr-hr/HT201372
 curl -O https://raw.githubusercontent.com/zackn9ne/macos_setup_cheatsheet/master/host-name-changer.sh && sh host-name-changer.sh
 ```
 
-### convert user to admin
+# escallate user to admin
 `dscl . -append /groups/admin GroupMembership USERNAME`
 
-### take away admin from user
+# revok admin privledges
 `sudo dseditgroup -o edit -d USERNAME -t user admin`
 
-### reset a users password (assumes you have root shell, cough, Addigy or you will need admin priveledges, no FV allowed here)
+# password reset
 `/usr/bin/dscl . -passwd /Users/USERNAME "N3wPassWorD"`
 
-### get logged in user
+# get logged in user
 ```
 loggedInUser=`python -c 'from SystemConfiguration import SCDynamicStoreCopyConsoleUser; import sys; username = (SCDynamicStoreCopyConsoleUser(None, None, None) or [None])[0]; username = [username,""][username in [u"loginwindow", None, u""]]; sys.stdout.write(username + "\n");'`
 ```
+or
 
-### get logged in console user
+get logged in console user
+
 `id -un`
 
-### get all users
+# get all users
 `dscl . list /Users | grep -v '_'`
 
 ### get admin users
