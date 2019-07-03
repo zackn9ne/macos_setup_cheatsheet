@@ -23,6 +23,9 @@ curl -O https://raw.githubusercontent.com/zackn9ne/macos_setup_cheatsheet/master
 # password reset
 `/usr/bin/dscl . -passwd /Users/USERNAME "N3wPassWorD"`
 
+# is root user enabeled
+`sudo dscl . -read /Users/root Password`
+
 # get logged in user
 ```
 loggedInUser=`python -c 'from SystemConfiguration import SCDynamicStoreCopyConsoleUser; import sys; username = (SCDynamicStoreCopyConsoleUser(None, None, None) or [None])[0]; username = [username,""][username in [u"loginwindow", None, u""]]; sys.stdout.write(username + "\n");'`
