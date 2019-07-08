@@ -1,5 +1,11 @@
 This is to drop into a terminal to setup macos
 
+# sign packages (you have to setup your Apple Developer ID 1st)
+`productsign --sign “Developer ID Installer: Your Developer Name (1A2B3C4D5E)” ~/Desktop/example.pkg ~/Desktop/signed-example.pkg`
+
+# check the package signature
+`pkgutil --check-signature /path/to/package.pkg`
+
 # make macOs USB installers Instructions
 https://support.apple.com/hr-hr/HT201372
 
