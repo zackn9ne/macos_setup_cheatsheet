@@ -6,6 +6,10 @@ This is to drop into a terminal to setup macos
 # check the package signature
 `pkgutil --check-signature /path/to/package.pkg`
 
+# make guest account script
+`curl -O https://raw.githubusercontent.com/sheagcraig/guestAccount/master/guest_account && sudo guest_account enable`
+
+
 # make macOs USB installers Instructions
 https://support.apple.com/hr-hr/HT201372
 
