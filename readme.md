@@ -1,5 +1,8 @@
 This is to drop into a terminal to setup macos
 
+# oneDrive mac files on demand scope
+Files On-Demand requires the latest version of Mac OS Mojave 10.14. You can download and install Mac OS Mojave from the Mac App Store.
+
 # sign packages (you have to setup your Apple Developer ID 1st)
 `productsign --sign “Developer ID Installer: Your Developer Name (1A2B3C4D5E)” ~/Desktop/example.pkg ~/Desktop/signed-example.pkg`
 
