@@ -73,6 +73,7 @@ dsconfigad -show | awk '/Active Directory Domain/{print $NF}'
 
 
 ### reset mac to new status on boot password break in hack :minidisc:
+Start or restart your Mac. As soon as you hear the startup tone, press and hold Command-S on the keyboard. Keep holding down those keys until you see a black screen with white lettering. This is called “booting into Single User Mode.”
 
 ```
 rm /var/db/.applesetupdone #will ask to create user account on next boot with GUI #you have to be onsite and boot into single user mode
