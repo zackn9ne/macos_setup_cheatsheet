@@ -1,5 +1,8 @@
 This is to drop into a terminal to setup macos
 
+# Privledges.app
+`/Applications/Privileges.app/Contents/Resources/PrivilegesCLI --remove`
+
 # oneDrive mac files on demand scope
 Files On-Demand requires the latest version of Mac OS Mojave 10.14. You can download and install Mac OS Mojave from the Mac App Store.
 
