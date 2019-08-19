@@ -1,7 +1,16 @@
 This is to drop into a terminal to setup macos
 
-# Privledges.app
+# Misc
+## GIF Screen recorder
+`brew cask install licecap`
+
+# Mac Admin GUI Tools
+## Privledges.app
 `/Applications/Privileges.app/Contents/Resources/PrivilegesCLI --remove`
+
+## Autopkgr
+
+# MacAdmin Commands and Tricks
 
 # oneDrive mac files on demand scope
 Files On-Demand requires the latest version of Mac OS Mojave 10.14. You can download and install Mac OS Mojave from the Mac App Store.
