@@ -150,6 +150,9 @@ how to setup crontab on macos: https://alvinalexander.com/mac-os-x/mac-osx-start
 
 ### filevault commands
 ```
+## is fv on?
+`sudo fdesetup status`
+
 ## check fv status
 diskutil cs list | grep 'Conversion Progress'
 
