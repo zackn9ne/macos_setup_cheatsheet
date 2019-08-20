@@ -4,6 +4,9 @@ This is to drop into a terminal to setup macos
 ## GIF Screen recorder
 `brew cask install licecap`
 
+## Printsystem
+`/private/etc/cups/PPD`
+
 # Mac Admin GUI Tools
 ## Privledges.app
 `/Applications/Privileges.app/Contents/Resources/PrivilegesCLI --remove`
