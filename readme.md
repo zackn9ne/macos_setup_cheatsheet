@@ -5,7 +5,11 @@ This is to drop into a terminal to setup macos
 `brew cask install licecap`
 
 ## Printsystem
+PPD's are in
 `/private/etc/cups/PPD`
+
+drivers are in
+`/Library/Printers/PPDs/Contents/Resources/`
 
 # Mac Admin GUI Tools
 ## Privledges.app
