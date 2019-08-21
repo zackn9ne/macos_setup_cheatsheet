@@ -68,3 +68,18 @@ DRIVER="/Library/Printers/PPDs/Contents/Resources/CNPZUIRAC250ZU.ppd.gz"
   -o CNPdeUseJobAccount=True \
   -o CNUseJobAccount=True \
   -o CNAuthenticate=True
+
+#begin printer example 4 generic driver
+MODEL="Xerox-Work-Centre"
+DISPLAY_NAME="Xerox-Work-Centre"
+LOCATION="Yards"
+PROTOCOL="lpd"
+DEVICE_URI="192.168.28.250"
+
+/usr/sbin/lpadmin -p "${MODEL}" \
+  -D "${DISPLAY_NAME}" \
+  -L "${LOCATION}" \
+  -E -v "${PROTOCOL}://${DEVICE_URI}" \
+  -m drv:///sample.drv/generpcl.ppd \
+  -o printer-is-shared=false 
+  
