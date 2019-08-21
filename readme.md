@@ -41,6 +41,13 @@ https://support.apple.com/hr-hr/HT201372
 # install pkg's
 `sudo installer -pkg /path/to/package.pkg -target /`
 
+# create a bootable VMWare Mojave Image
+Create a virtual disk image .dmg to fit the installation media. This command will do the trick: `hdiutil create -o /tmp/Mojave -size 8000m -layout SPUD -fs HFS+J`
+
+Mount it using this command: `hdiutil attach /tmp/Mojave.dmg -noverify -mountpoint /Volumes/install_build`
+
+Use the createinstallmedia tool that is packed in the Mojave installer that you downloaded from the AppStore to write the Mojave Installer to the virtual disk image we just created. remember to use sudo!: `sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/createinstallmedia --volume /Volumes/Mojave`
+
 # users and hosnames
 
 ### copy paste and press return to rename computers with zackn9nez hoStnamE ChanGeR ScRiPT :computer:
