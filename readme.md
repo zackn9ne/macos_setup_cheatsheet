@@ -15,6 +15,13 @@ drivers are in
 how to see what Kexts are allowed (with sample kext download) no need to sign, just make and feed to JAMF
 `https://forums.ivanti.com/s/article/How-To-Add-Kernel-Extension-Exceptions-using-Ivanti-MDM-in-2018-3`
 
+## Synology
+```
+sudo smbstatus 
+ps -p $PID-o comm= #get details on problematic $PID
+awk -v val=$UID -F ":" ‘$3==val{print $1}’ /etc/passwd #to get details on problematic $UID
+```
+
 # Mac Admin GUI Tools
 ## Privledges.app
 `/Applications/Privileges.app/Contents/Resources/PrivilegesCLI --remove`
