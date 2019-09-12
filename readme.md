@@ -11,6 +11,10 @@ PPD's are in
 drivers are in
 `/Library/Printers/PPDs/Contents/Resources/`
 
+## JAMF
+how to see what Kexts are allowed (with sample kext download) no need to sign, just make and feed to JAMF
+`https://forums.ivanti.com/s/article/How-To-Add-Kernel-Extension-Exceptions-using-Ivanti-MDM-in-2018-3`
+
 # Mac Admin GUI Tools
 ## Privledges.app
 `/Applications/Privileges.app/Contents/Resources/PrivilegesCLI --remove`
