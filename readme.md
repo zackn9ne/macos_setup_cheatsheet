@@ -11,10 +11,6 @@ PPD's are in
 drivers are in
 `/Library/Printers/PPDs/Contents/Resources/`
 
-## JAMF
-how to see what Kexts are allowed (with sample kext download) no need to sign, just make and feed to JAMF
-`https://forums.ivanti.com/s/article/How-To-Add-Kernel-Extension-Exceptions-using-Ivanti-MDM-in-2018-3`
-
 ## Synology
 ```
 sudo smbstatus 
@@ -160,6 +156,12 @@ kextstat | grep -v com.apple
 With the advent of macOS 10.13 High Sierra, Apple introduced User Approved Kernel Extension Loading (UAKEL). This means that kernel extensions (also called kexts or security extensions) must be approved before they can be installed...
 
 ...Because xyz requires kexts to be installed, you will need to configure an MDM Profile and MDM Configuration for Kernel Extension Whitelist to bypass the user dialog that is normally required to approve a kext. 
+```
+
+```
+create a kext from an pre-approved action on a sample machine
+how to see what Kexts are allowed (with sample kext download) no need to sign, just make and feed to JAMF
+https://forums.ivanti.com/s/article/How-To-Add-Kernel-Extension-Exceptions-using-Ivanti-MDM-in-2018-3
 ```
 
 ### stupid mac tricks (links)
