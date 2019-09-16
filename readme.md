@@ -26,8 +26,6 @@ awk -v val=$UID -F ":" ‘$3==val{print $1}’ /etc/passwd #to get details on pr
 ## Privledges.app
 `/Applications/Privileges.app/Contents/Resources/PrivilegesCLI --remove`
 
-## Autopkgr
-
 # MacAdmin Commands and Tricks
 
 # oneDrive mac files on demand scope
@@ -149,7 +147,7 @@ ls ~/Library/Logs/DiagnosticReports/
 2. autopkg repo-add https://github.com/autopkg/recipes
 3. autopkg list-recipes | grep Excel
 4. autopkg run MicrosoftExcel2016.install
-5. pkg's end up in /Library/AutoPkg/Cache/
+5. open ~/Library/AutoPkg/Cache/
 
 ```
 
