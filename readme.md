@@ -1,6 +1,5 @@
-This is to drop into a terminal to setup macos
+# macOS Sysadmin Cheatsheet
 
-# Misc
 ## GIF Screen recorder
 `brew cask install licecap`
 
