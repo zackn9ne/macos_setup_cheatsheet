@@ -1,8 +1,10 @@
 # macOS Sysadmin Cheatsheet
 
 ## Convert HVIC files to jpg
-`brew install magic`
-`magick mogrify -monitor -format jpg *.HEIC`
+```
+brew install imagemagick
+magick mogrify -monitor -format jpg *.HEIC
+```
 
 ## GIF Screen recorder
 `brew cask install licecap`
