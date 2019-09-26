@@ -139,9 +139,9 @@ ls ~/Library/Logs/DiagnosticReports/
 ```
 
 
-# Sysadmin Tools I like
+# Essential MacAdmin Tools
 
-### autopkg 
+### autopkg and autopkgr (GUI)
 
 ```
 1. download and install autopkg
@@ -154,9 +154,8 @@ ls ~/Library/Logs/DiagnosticReports/
 
 
 
-### kext
+### how to create a kext
 ```
-kextstat | grep -v com.apple
 
 With the advent of macOS 10.13 High Sierra, Apple introduced User Approved Kernel Extension Loading (UAKEL). This means that kernel extensions (also called kexts or security extensions) must be approved before they can be installed...
 
