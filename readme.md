@@ -9,7 +9,7 @@ magick mogrify -monitor -format jpg *.HEIC
 ## GIF Screen recorder
 `brew cask install licecap`
 
-## Printsystem
+## Add Printsystem to JAMF
 PPD's are in
 `/private/etc/cups/PPD`
 
