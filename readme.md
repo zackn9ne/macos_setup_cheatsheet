@@ -9,6 +9,10 @@ magick mogrify -monitor -format jpg *.HEIC
 ## GIF Screen recorder
 `brew cask install licecap`
 
+
+## no screensaver allowed in login screen
+`sudo defaults write /Library/Preferences/com.apple.screensaver loginWindowIdleTime 0`
+
 ## Add Printsystem to JAMF
 PPD's are in
 `/private/etc/cups/PPD`
