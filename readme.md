@@ -1,5 +1,14 @@
 # macOS Sysadmin Cheatsheet
 
+## make vmware fusion do stuff with JAMF
+```
+#echo below to ~/VirtualMachines/$vmname/*.vmdk
+#
+hw.model = "MacBookPro8,1"
+serianNumber = $stuff
+```
+
+
 ## Convert HVIC files to jpg
 ```
 brew install imagemagick
