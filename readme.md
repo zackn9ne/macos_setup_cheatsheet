@@ -2,6 +2,8 @@
 
 ## make vmware fusion do stuff with JAMF
 ```
+brew cask install autodmg
+brew install vfuse
 #echo below to ~/VirtualMachines/$vmname/*.vmdk
 #
 hw.model = "MacBookPro8,1"
