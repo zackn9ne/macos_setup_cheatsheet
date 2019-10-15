@@ -1,6 +1,7 @@
 #!/bin/bash
 #
 # To use this script, quit VMware Fusion first!!!
+# src: https://www.jamf.com/jamf-nation/discussions/30708/vmware-fusion-virtual-mac-unable-to-enroll
 #
 # You'll be dragging this script into Terminal, then dragging the *.vmx file into Terminal.
 # This requires sudo rights, but you already knew that, right? :)
