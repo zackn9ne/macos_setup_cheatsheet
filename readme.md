@@ -12,8 +12,11 @@ sudo/usr/local/vfuse/bin -i <locationtoyourdmgcreatedfromautodmg>.dmg -n "<your 
 
 #echo below to ~/VirtualMachines/$vmname/*.vmdk
 #
+# https://www.jamf.com/jamf-nation/discussions/30708/vmware-fusion-virtual-mac-unable-to-enroll
+# run this against the *.vmdk
+https://www.jamf.com/jamf-nation/discussions/30708/vmware-fusion-virtual-mac-unable-to-enroll
 hw.model = "MacBookPro8,1"
-serianNumber = $stuff
+serialnNumber = $stuff
 ```
 
 
