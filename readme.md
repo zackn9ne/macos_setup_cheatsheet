@@ -2,8 +2,14 @@
 
 ## make vmware fusion do stuff with JAMF
 ```
+# delete screwed up entries in JP Mobile Devices ;()
+
 brew cask install autodmg
 brew install vfuse
+
+#<your vm name> = its going to create a new vmware vm in ~/<your vm name>
+sudo/usr/local/vfuse/bin -i <locationtoyourdmgcreatedfromautodmg>.dmg -n "<your vm name>" -s <Dep Serial Number here> --hw-model MacBookPro8,1
+
 #echo below to ~/VirtualMachines/$vmname/*.vmdk
 #
 hw.model = "MacBookPro8,1"
