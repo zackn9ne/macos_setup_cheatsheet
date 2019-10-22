@@ -19,6 +19,8 @@ echo "IMPORTANT: To use this script, quit VMware Fusion first!!!"
 echo "**********************************************************"
 echo ""
 
+echo "Quit VMWARE and, show the virtual machine you will be blessing in the finder, drag the path of the VM's inside VMX file as an argument to this script"
+read -p "Press enter to continue".
 echo "fake Serial Number, will be:" $(echo SN)
 
 echo "Enter ModelIdentifier for example MacBookPro15,1 or iMacPro1,1"
