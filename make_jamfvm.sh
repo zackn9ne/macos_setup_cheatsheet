@@ -19,8 +19,7 @@ echo "IMPORTANT: To use this script, quit VMware Fusion first!!!"
 echo "**********************************************************"
 echo ""
 
-echo "Enter your fake Serial Number, up to 12 characters (letters and numbers)."
-read SERIALNUMBER
+echo "fake Serial Number, will be:" $(echo SN)
 
 echo "Enter ModelIdentifier for example MacBookPro15,1 or iMacPro1,1"
 read MODELIDENTIFIER
@@ -38,6 +37,6 @@ sed -i '' '/serialNumber/d' "$VMXFILE"
 # Add Model Identifier and Serial Number
 
 echo "hw.model = $MODELIDENTIFIER" >> "$VMXFILE"
-echo "serialNumber = $SERIALNUMBER" >> "$VMXFILE"
+echo "serialNumber = $SN" >> "$VMXFILE"
 
 exit 0
