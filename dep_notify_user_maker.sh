@@ -18,3 +18,6 @@ USERNAME=$(/usr/libexec/plistbuddy $DNPLIST -c "print 'Computer Name'" | tr [A-Z
 
 # Set username var
 $JAMFBIN createAccount -username $USERNAME -realname $USERNAME -password Welcome2019 -admin
+
+# Outta here
+pkill loginwindow
