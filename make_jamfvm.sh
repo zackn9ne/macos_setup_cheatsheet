@@ -26,9 +26,7 @@ echo "fake Serial Number, will be:" $(echo SN)
 echo "drag the path to your VMXFILE here"
 read VMXFILE
 
-echo "Your getting ModelIdentifier MacBookPro15,1 or iMacPro1,1 is this ok?"
-
-read -r -p "Are you sure? [y/N] " response
+read -r -p "Your getting ModelIdentifier MacBookPro15,1 is this OK? [y/N] " response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
 then
     MODELIDENTIFIER="MacBookPro15,1"
