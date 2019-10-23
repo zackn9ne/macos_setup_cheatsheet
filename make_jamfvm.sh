@@ -11,7 +11,7 @@
 # 20180208 DM
 
 SN=$(python -c "import string; from random import randint, sample; print('VM' + ''.join(sample((string.ascii_uppercase + string.digits),10)))")
-VMXFILE="$1"
+#VMXFILE="$1"
 
 echo ""
 echo "**********************************************************"
@@ -23,8 +23,20 @@ echo "Quit VMWARE and, show the virtual machine you will be blessing in the find
 read -p "Press enter to continue".
 echo "fake Serial Number, will be:" $(echo SN)
 
-echo "Enter ModelIdentifier for example MacBookPro15,1 or iMacPro1,1"
-read MODELIDENTIFIER
+echo "drag the path to your VMXFILE here"
+read VMXFILE
+
+echo "Your getting ModelIdentifier MacBookPro15,1 or iMacPro1,1 is this ok?"
+
+read -r -p "Are you sure? [y/N] " response
+if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
+then
+    MODELIDENTIFIER="MacBookPro15,1"
+else
+    echo "Ok type in your own ModelIdentifier then maybe you like iMacPro1,1 as a hint:"
+    read MODELIDENTIFIER
+fi
+
 
 # Remove device specific crud
 
