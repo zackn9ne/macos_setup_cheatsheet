@@ -1,23 +1,11 @@
 # macOS Sysadmin Cheatsheet
 
-## make vmware fusion do stuff with JAMF
-```
-# delete screwed up entries in JP Mobile Devices ;()
+## let me tell you about make JAMF vm
 
-brew cask install autodmg
-brew install vfuse
-
-#<your vm name> = its going to create a new vmware vm in ~/<your vm name>
-sudo/usr/local/vfuse/bin -i <locationtoyourdmgcreatedfromautodmg>.dmg -n "<your vm name>" -s <Dep Serial Number here> --hw-model MacBookPro8,1
-
-#echo below to ~/VirtualMachines/$vmname/*.vmdk
-#
-# https://www.jamf.com/jamf-nation/discussions/30708/vmware-fusion-virtual-mac-unable-to-enroll
-# run this against the *.vmdk
-https://www.jamf.com/jamf-nation/discussions/30708/vmware-fusion-virtual-mac-unable-to-enroll
-hw.model = "MacBookPro8,1"
-serialnNumber = $stuff
-```
+# you need vmware
+* make an macOS VM
+* bless the `.vmx` file foun d in Show Package Contents
+* `sh make_jamfvm.sh` it will prompt you for stuff, there are no arguments
 
 
 ## Convert HVIC files to jpg
