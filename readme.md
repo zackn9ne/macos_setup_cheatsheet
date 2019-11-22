@@ -1,8 +1,7 @@
 # macOS Sysadmin Cheatsheet
 
 ## let me tell you about make JAMF vm
-
-# you need vmware
+* you need VMWare Fusion
 * make an macOS VM
 * bless the `.vmx` file foun d in Show Package Contents
 * `sh make_jamfvm.sh` it will prompt you for stuff, there are no arguments
