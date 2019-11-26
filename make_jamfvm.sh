@@ -23,7 +23,7 @@ echo "Quit VMWARE and, show the virtual machine you will be blessing in the find
 read -p "Press enter to continue".
 echo "fake Serial Number, will be:" $(echo SN)
 
-echo "drag the path to your VMXFILE here"
+echo "drag the path to your .VMX FILE here"
 read VMXFILE
 
 read -r -p "Your getting ModelIdentifier MacBookPro15,1 is this OK? [y/N] " response
