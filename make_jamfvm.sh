@@ -6,7 +6,7 @@
 # You'll be dragging this script into Terminal, then dragging the *.vmx file into Terminal.
 # This requires sudo rights, but you already knew that, right? :)
 #
-#    /path/to/ThisScript.sh /path/to/MyVm.vmwarevm/MyVm.vmx
+#    /path/to/ThisScript.sh (no arguments needed you will be prompted)
 #
 # 20180208 DM
 
