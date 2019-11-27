@@ -24,6 +24,8 @@ read -p "Press enter to continue".
 echo "fake Serial Number, will be:" $(echo SN)
 
 echo "drag the path to your .VMX FILE here"
+echo "we are about to pop up your finder window of the default VMWare VM's location so you can do this easier"
+open ~/Virtual\ Machines.localized/
 read VMXFILE
 
 read -r -p "Your getting ModelIdentifier MacBookPro15,1 is this OK? [y/N] " response
