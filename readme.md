@@ -69,7 +69,7 @@ Mount it using this command: `hdiutil attach /tmp/Mojave.dmg -noverify -mountpoi
 
 Use the createinstallmedia tool that is packed in the Mojave installer that you downloaded from the AppStore to write the Mojave Installer to the virtual disk image we just created. remember to use sudo!: `sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/createinstallmedia --volume /Volumes/Mojave`
 
-# users and hosnames
+# users
 
 ### copy paste and press return to rename computers with zackn9nez hoStnamE ChanGeR ScRiPT :computer:
 
@@ -88,6 +88,9 @@ curl -O https://raw.githubusercontent.com/zackn9ne/macos_setup_cheatsheet/master
 
 # is root user enabeled
 `sudo dscl . -read /Users/root Password`
+
+# is securetoken on for user
+`sysadminctl interactive -secureTokenStatus USER_NAME`
 
 # get logged in user
 ```
