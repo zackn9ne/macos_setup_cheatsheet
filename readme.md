@@ -2,7 +2,7 @@
 
 ## Crazy legs Catalina installer
 ```
-curl -O https://raw.githubusercontent.com/grahampugh/erase-install/master/erase-install.sh && sudo bash erase-install.sh --move --version=10.15.2
+cd /tmp && curl -O https://raw.githubusercontent.com/grahampugh/erase-install/master/erase-install.sh && sudo bash erase-install.sh --move --version=10.15.2
 ```
 
 ## Convert HVIC files to jpg
