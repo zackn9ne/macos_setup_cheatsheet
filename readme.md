@@ -17,7 +17,7 @@ launchctl load /System/Library/LaunchDaemons/ssh.plist
 
 
 ```
-## Crazy legs Catalina installer
+## Side Load Catalina installer
 ```
 cd /tmp && curl -O https://raw.githubusercontent.com/grahampugh/erase-install/master/erase-install.sh && sudo bash erase-install.sh --move --version=10.15.2
 ```
