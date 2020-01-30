@@ -1,5 +1,22 @@
 # macOS Sysadmin Cheatsheet
 
+## reset a users password Jamf Pro
+`sudo jamf resetPassword -username <name> -password <password>`
+
+## enable SSH access for only ONE USER macos
+```
+systemsetup -setremotelogin on
+launchctl unload /System/Library/LaunchDaemons/ssh.plist
+# Delete SSH access for existing users and groups
+dscl . delete /Groups/com.apple.access_ssh NestedGroups
+dscl . delete /Groups/com.apple.access_ssh GroupMembership
+# Add SSH access for specific user(s)
+dscl . create /Groups/com.apple.access_ssh GroupMembership test
+# turnon
+launchctl load /System/Library/LaunchDaemons/ssh.plist
+
+
+```
 ## Crazy legs Catalina installer
 ```
 cd /tmp && curl -O https://raw.githubusercontent.com/grahampugh/erase-install/master/erase-install.sh && sudo bash erase-install.sh --move --version=10.15.2
