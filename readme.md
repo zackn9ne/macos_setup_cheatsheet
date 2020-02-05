@@ -185,22 +185,17 @@ ls ~/Library/Logs/DiagnosticReports/
 
 ### how to create a kext
 ```
-
-With the advent of macOS 10.13 High Sierra, Apple introduced User Approved Kernel Extension Loading (UAKEL). This means that kernel extensions (also called kexts or security extensions) must be approved before they can be installed...
-
-...Because xyz requires kexts to be installed, you will need to configure an MDM Profile and MDM Configuration for Kernel Extension Whitelist to bypass the user dialog that is normally required to approve a kext. 
+Create a kext from an pre-approved action on a sample machine.
+Using the output from the Kext_Policy table, locate the Team_ID for the application and add it to the 'AllowedTeamIdentifiers'. In the provided ApprovedKEXT.mobileconfig file in this repo.
+Push Config Profile to machine using MDM.
 ```
 
+### LINKS
 ```
-create a kext from an pre-approved action on a sample machine
-how to see what Kexts are allowed (with sample kext download) no need to sign, just make and feed to JAMF
+https://chris-collins.io/2018/03/15/Using-Terminal-At-macOS-Setup-Assistant/
 https://forums.ivanti.com/s/article/How-To-Add-Kernel-Extension-Exceptions-using-Ivanti-MDM-in-2018-3
-```
-
-### stupid mac tricks (links)
-```
-login screen helps: https://twocanoes.com/12-customizations-for-the-mojave-macos-login-window-that-you-didnt-know-about/
-how to setup crontab on macos: https://alvinalexander.com/mac-os-x/mac-osx-startup-crontab-launchd-jobs
+https://twocanoes.com/12-customizations-for-the-mojave-macos-login-window-that-you-didnt-know-about/
+https://alvinalexander.com/mac-os-x/mac-osx-startup-crontab-launchd-jobs
 ```
 
 ### filevault commands
