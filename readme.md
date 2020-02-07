@@ -1,5 +1,9 @@
 # macOS Sysadmin Cheatsheet
 
+## kext lookup cheatsheet
+`sudo sqlite3 /var/db/SystemPolicyConfiguration/KextPolicy`
+`select * from kext_policy; `
+
 ## reset a users password Jamf Pro
 `sudo jamf resetPassword -username <name> -password <password>`
 
