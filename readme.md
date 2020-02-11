@@ -198,6 +198,7 @@ Push Config Profile to machine using MDM.
 
 ### LINKS
 ```
+https://support.jamfschool.com/hc/en-us/articles/115004701513-Whitelist-Kernel-Extensions
 https://chris-collins.io/2018/03/15/Using-Terminal-At-macOS-Setup-Assistant/
 https://forums.ivanti.com/s/article/How-To-Add-Kernel-Extension-Exceptions-using-Ivanti-MDM-in-2018-3
 https://twocanoes.com/12-customizations-for-the-mojave-macos-login-window-that-you-didnt-know-about/
