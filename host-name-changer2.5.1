@@ -104,6 +104,9 @@ user=$( scutil <<< "show State:/Users/ConsoleUser" | awk -F': ' '/[[:space:]]+Na
 echo "detected location is" $location
 echo "detected user is:" $user
 
+#sanitize user
+user=$(echo $user | sed 's/[^a-zA-Z0-9]//g')
+
 #killswitch
 if [ -z "$user" ]
 then
