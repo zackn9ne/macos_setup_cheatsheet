@@ -1,0 +1,143 @@
+#!/bin/bash
+
+#welcome to zackn9nes jamf hostname script
+jamfbinary=$(/usr/bin/which jamf)
+location=$4 #for jamf operator input #required
+model=$5 #for jamf operator input #not required
+
+
+#*** testing
+location="NY"
+
+
+function mnfdate()
+{
+ local WEEK=$1 YEAR=$2
+ local JAN1_WEEK JAN1_DAY
+ local FIRST_MON
+ local DATE_FMT="%d %b %Y"
+ local DATEYEAR DAYS DAYSTMP
+
+ DATEYEAR="01-Jan-$YEAR"
+ JAN1_WEEK=$(date -jf "%d-%b-%Y" "$DATEYEAR" +%W)
+ JAN1_DAY=$(date -jf "%d-%b-%Y" "$DATEYEAR" +%u)
+
+ # If Jan 1 is Monday then use Jan 1, else calculate what date is first Monday of year
+ if ((JAN1_WEEK))
+ then
+   FIRST_MON=$YEAR-Jan-01
+ else
+   FIRST_MON=$YEAR-Jan-$((01 + (7 - JAN1_DAY + 1) ))
+ fi
+ (( DAYSTMP = $WEEK * 7 ))
+ DAYS="-v+"$DAYSTMP"d"
+ DATEYEAR=$(date -j -f "%Y-%b-%d" $DAYS "$FIRST_MON" +"%Y-%m-%d")
+ echo "$DATEYEAR"
+}
+
+SERIAL=`ioreg -c IOPlatformExpertDevice -d 2 | awk -F\" '/IOPlatformSerialNumber/{print $(NF-1)}'`
+
+if [ "${#SERIAL}" = '11' ]
+  then
+  # Old Serial number format (11 Chars) - Changed in 2010
+  # Year is third character in serial number
+  YEAR=${SERIAL:2:1}
+  # Key index for years
+  KEY_YEAR='   3456789012'
+  # Strip characters from KEY_YEAR after the YEAR
+  IDX_YEAR="${KEY_YEAR%%$YEAR*}"
+  # Base year is 2000, Manufactured year is base year + position of the YEAR in the KEY_YEAR
+  MNF_YEAR=$((2000 + ${#IDX_YEAR}))
+
+elif [ "${#SERIAL}" = '12' ]
+  then
+  # New Serial number format (12 chars)
+  # Key index for years: c is first half of 2010, d is second half 2010...
+  # goes through 2019
+  KEY_YEAR='cdfghjklmnpqrstvwxyz'
+  # Year is fourth character in serial number
+  YEAR=${SERIAL:3:1}
+  # Set YEAR to lowercase
+  YEAR=$(echo $YEAR| tr '[:upper:]' '[:lower:]')
+  # Strip characters from KEY_YEAR after the YEAR
+  IDX_YEAR="${KEY_YEAR%%$YEAR*}"
+  # Base year is 2010, Manufactured year is base year + position of the YEAR in the KEY_YEAR
+  # divided by 2 (each letter is half year)
+  MNF_YEAR=$(( 2010 + ${#IDX_YEAR} / 2))
+  # determine first or second half of year
+  HALF_YEAR=$(( ${#IDX_YEAR} % 2))
+
+
+fi
+
+echo "$MNF_YEAR"
+
+
+
+
+
+
+# check system
+initialhweval=$(sysctl hw.model)
+if [[ $initialhweval == *"Pro"* ]];
+then
+    echo "Pro detected proceeding to eval model type"
+    model="MBP"
+elif [[ $initialhweval == *"Air"* ]];
+then
+    echo "You have a macbook air, sorry to hear that"
+    model="MBA"
+elif [[ $initialhweval == *"iMac"* ]];
+then
+    echo "Desktop mac"
+    model="iMac"
+elif [ -z "$initialhweval" ];
+then
+    echo "computer unknown"
+exit 1
+
+    echo $model
+fi
+
+#check user whos logged in
+user=$( scutil <<< "show State:/Users/ConsoleUser" | awk -F': ' '/[[:space:]]+Name[[:space:]]:/ { if ( $2 != "loginwindow" ) { print $2 }}' )
+echo "detected location is" $location
+echo "detected user is:" $user
+
+#killswitch
+if [ -z "$user" ]
+then
+	echo "user is null exiting with error"
+    exit 1
+elif [ $user = "root" ]
+then
+     echo "user is root user failing gracefully"
+     exit 1
+elif [ $user = "splash" ]
+then
+     echo "user is splash user failing gracefully"
+     exit 1
+elif [ -z "$location" ]
+then
+	echo "Location is broken exiting with error either set variable manually or put in $4 of jamf pro"
+    exit 1
+elif [ -z "$model" ]
+then
+	echo "Model is broken exiting with error"
+    exit 1
+
+else
+    echo "proceeding"
+fi
+
+
+#do all of the things
+hostname="${location}-${model}-${MNF_YEAR}-${user}"
+echo $hostname
+
+read -n 1 -s -r -p "Press any key to continue"
+$jamfbinary setComputerName -name "$hostname"
+$jamfbinary recon
+
+
+
