@@ -10,11 +10,11 @@ model=$5 #for jamf operator input #not required
 location="NY"
 
 #get (serial for) year
-YEAR=`system_profiler SPHardwareDataType | awk '/Serial/ {print $4}' | grep -o '....$'`
-echo "$YEAR"
+YEAR=$(system_profiler SPHardwareDataType | awk '/Serial/ {print $4}' | grep -o '....$')
+echo "last four is" $YEAR
 #use that (serial) for actual year
-MNF_YEAR=`curl "https://support-sp.apple.com/sp/product?cc=`echo $YEAR`" |grep -Eo '[0-9]{4}'`
-echo $MNF_YEAR
+MNF_YEAR=$(curl "https://support-sp.apple.com/sp/product?cc=`echo $YEAR`" |grep -Eo '[0-9]{4}')
+echo "determined year is" $MNF_YEAR
 
 #get model
 initialhweval=$(sysctl hw.model)
