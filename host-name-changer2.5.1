@@ -9,11 +9,12 @@ model=$5 #for jamf operator input #not required
 #*** testing
 location="NY"
 
-#get year
-MNF_YEAR=`/usr/libexec/PlistBuddy -c "print :$(sysctl -n hw.model):_LOCALIZABLE_:marketingModel" /System/Library/PrivateFrameworks/ServerInformation.framework/Versions/A/Resources/English.lproj/SIMachineAttributes.plist |awk -F'[()]' '{print $2}' | grep -Eo '[0-9]{1,4}'`
-echo "$MNF_YEAR"
-
-
+#get (serial for) year
+YEAR=`system_profiler SPHardwareDataType | awk '/Serial/ {print $4}' | grep -o '....$'`
+echo "$YEAR"
+#use that (serial) for actual year
+MNF_YEAR=`curl "https://support-sp.apple.com/sp/product?cc=`echo $YEAR`" |grep -Eo '[0-9]{4}'`
+echo $MNF_YEAR
 
 #get model
 initialhweval=$(sysctl hw.model)
