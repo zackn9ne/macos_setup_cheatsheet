@@ -84,7 +84,9 @@ fi
 hostname="${location}-${model}-${MNF_YEAR}-${user}"
 echo $hostname
 
-read -n 1 -s -r -p "Press any key to continue"
+
+#***testing!! 
+#read -n 1 -s -r -p "Press any key to continue"
 $jamfbinary setComputerName -name "$hostname"
 $jamfbinary recon
 
