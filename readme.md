@@ -68,7 +68,7 @@ Files On-Demand requires the latest version of Mac OS Mojave 10.14. You can down
 `python -c "import string; from random import randint, sample; print('VM' + ''.join(sample((string.ascii_uppercase + string.digits),10)))"`
 
 # sign packages (you have to setup your Apple Developer ID 1st)
-`productsign --sign “Developer ID Installer: Your Developer Name (1A2B3C4D5E)” ~/Desktop/example.pkg ~/Desktop/signed-example.pkg`
+`productsign --sign “Developer ID Installer: Your Developer Name (12345asdf1234)” ~/Desktop/example.pkg ~/Desktop/signed-example.pkg`
 
 # check the package signature
 `pkgutil --check-signature /path/to/package.pkg`
