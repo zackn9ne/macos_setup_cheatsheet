@@ -1,5 +1,8 @@
 # macOS Sysadmin Cheatsheet
 
+## see what crashed and why
+`ls /Users/$USER/Library/Logs/DiagnosticReports/`
+
 ## kext lookup cheatsheet
 ```
 sudo sqlite3 /var/db/SystemPolicyConfiguration/KextPolicy
