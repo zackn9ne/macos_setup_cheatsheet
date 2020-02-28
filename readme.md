@@ -31,16 +31,6 @@ launchctl load /System/Library/LaunchDaemons/ssh.plist
 cd /tmp && curl -O https://raw.githubusercontent.com/grahampugh/erase-install/master/erase-install.sh && sudo bash erase-install.sh --move --version=10.15.2
 ```
 
-## Convert HVIC files to jpg
-```
-brew install imagemagick
-magick mogrify -monitor -format jpg *.HEIC
-```
-
-## GIF Screen recorder
-`brew cask install licecap`
-
-
 ## no screensaver allowed in login screen
 `sudo defaults write /Library/Preferences/com.apple.screensaver loginWindowIdleTime 0`
 
@@ -51,12 +41,6 @@ PPD's are in
 drivers are in
 `/Library/Printers/PPDs/Contents/Resources/`
 
-## Synology
-```
-sudo smbstatus 
-ps -p $PID-o comm= #get details on problematic $PID
-awk -v val=$UID -F ":" ‘$3==val{print $1}’ /etc/passwd #to get details on problematic $UID
-```
 
 # Mac Admin GUI Tools
 ## Privledges.app
@@ -161,19 +145,13 @@ rm /var/db/.applesetupdone #will ask to create user account on next boot with GU
 ### open link in chrome
 `open -a "Google Chrome" https://chrome.google.com/webstore/detail/clear-cache/cppjkneekbjaeellbfkmgnhonkkjfpdn?hl=en`
 
-### fuxor chrome for a fuxored user
+### Chrome Remove Searchvirus
 ```
 #!/bin/sh
 sudo pkill chrome
 rm -rf "~/Library/Application Support/Google"
 rm -rf "~/Library/Caches/com.google.Chrome*"
 rm -rf "~/Library/Google"
-```
-
-
-### crash logs directory :flashlight:
-```
-ls ~/Library/Logs/DiagnosticReports/ 
 ```
 
 
@@ -189,8 +167,7 @@ ls ~/Library/Logs/DiagnosticReports/
 5. open ~/Library/AutoPkg/Cache/
 
 ```
-
-
+### PPPCUtility
 
 ### how to create a kext
 ```
@@ -235,8 +212,6 @@ sudo diskutil apfs updatePreboot /
 
 ```
 
-
-
 ### send notification to user
 ```
 osascript -e 'display alert "Hello World!" message "The reason for this pop-up alert: IT Work In Progress"'
@@ -259,7 +234,7 @@ lpadmin -p $MODEL \
 -o StringBeforeEqualsSign=ValueAfterColon #found on lpoptions -l pRiNtErNaMe -t
 ```
 
-### Download MacOS Installers, run them via command line
+### Installinstallmacos.py Cheatsheet MacOS Installers, run them via command line
 ```
 sudo curl -o installmacos.py https://raw.githubusercontent.com/munki/macadmin-scripts/master/installinstallmacos.py
 sudo python installmacos.py
@@ -281,19 +256,6 @@ open ./Install_macOS_10.14.3-18D109.dmg
 ## do in place upgrade
 `sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/startosinstall --agreetolicense --nointeraction`
 
-
-### cool neat mojave install command line options
-```
-Arguments
---license, prints the user license agreement only.
---agreetolicense, agree to the license you printed with --license.
---rebootdelay, how long to delay the reboot at the end of preparing. This delay is in seconds and has a maximum of 300 (5 minutes).
---pidtosignal, Specify a PID to which to send SIGUSR1 upon completion of the prepare phase. To bypass "rebootdelay" send SIGUSR1 back to startosinstall.
---installpackage, the path of a package (built with productbuild(1)) to install after the OS installation is complete; this option can be specified multiple times.
---eraseinstall, (Requires APFS) Erase all volumes and install to a new one. Optionally specify the name of the new volume with --newvolumename.--newvolumename, the name of the volume to be created with --eraseinstall.
---preservecontainer, preserves other volumes in your APFS container when using --eraseinstall.
---usage, prints this message.
-```
 
 ### Reset Dock
 ```
@@ -317,30 +279,6 @@ python dock.py
 
 ```
 
-
-### Pycreateuserpkg area https://github.com/gregneagle/pycreateuserpkg
-
-```
-#get the script (if this errors, download the developer command line tools).
-git clone https://github.com/gregneagle/pycreateuserpkg.git
- 
-#go into the project
-cd pycreateuserpkg
- 
-#run the script with options replacing username, password, UID, and where you want to save it
-#createuserpkg -a -u UID -n SHORTNAME  -p PASSWORD -V VERSION -i  PACKAGE_IDENTIFIER /path/to/save/user.pkg
-#this will create an admin user named "mac" with password "mac" with a package version "1" and a package identifier com.twocanoes.mds.createuser and save it to a package called User.pkg in /tmp. Don't worry too much about the version and identifier, just use reasonable values.
-#The UID should be something >500, since macOS starts creating users around there. I usually start at 900. 
-./createuserpkg -a -u 900 -n "mac"  -p mac -V 1 -i  com.twocanoes.mds.createuser /tmp/User.pkg
-
-#examples regular user create a pkg
-./createuserpkg -u 900 -n "carolinet" -f "Caroline User" -p "secretpass" -V 1 -i com.company.net.createuser /tmp/Carolineu.pkg
-./createuserpkg -u 900 -n "floater" -f "Floater User" -p "coolnewstartup" -V 1 -i com.coolnewstartup.net.createuser /tmp/float-coolnewstartup.pkg
-
-#now install it
-installer -pkg /tmp/temp.pkg -target /
-
-```
 
 
 
