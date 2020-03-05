@@ -1,5 +1,9 @@
 # macOS Sysadmin Cheatsheet
 
+## who/why defered in jamf (see whodefered.sh)
+`cat /Library/Application\ Support/JAMF/.userdelay.plist`
+
+
 ## see what crashed and why
 `ls /Users/$USER/Library/Logs/DiagnosticReports/`
 
