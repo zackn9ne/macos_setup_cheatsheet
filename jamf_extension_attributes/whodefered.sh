@@ -2,5 +2,7 @@
 
 FILE=/Library/Application\ Support/JAMF/.userdelay.plist
 if [ -f "$FILE" ]; then
-    echo "$FILE exist"
+   echo "<result>Deferals Exist</result>"
+else
+   echo "<result>Nothing Defered</result>"
 fi
