@@ -1,5 +1,8 @@
 # macOS Sysadmin Cheatsheet
 
+## how to get app version
+`defaults read /Applications/zoom.us.app/Contents/Info.plist CFBundleShortVersionString`
+
 ## how to get bundle ID
 `/usr/libexec/PlistBuddy -c 'Print CFBundleIdentifier' /Applications/Safari.app/Contents/Info.plist`
 
