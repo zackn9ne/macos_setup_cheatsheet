@@ -9,11 +9,14 @@
 ### common bundle ID's
 ```
 com.google.Chrome
+org.mozilla.firefox
 com.microsoft.Word
 com.microsoft.Excel
+com.microsoft.Outlook
 com.microsoft.Powerpoint
 com.microsoft.OneDrive-mac
 us.zoom.xos
+com.tinyspeck.slackmacgap
 ```
 
 
