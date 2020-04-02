@@ -6,6 +6,18 @@
 ## how to get bundle ID
 `/usr/libexec/PlistBuddy -c 'Print CFBundleIdentifier' /Applications/Safari.app/Contents/Info.plist`
 
+### common bundle ID's
+```
+com.google.Chrome
+com.microsoft.Word
+com.microsoft.Excel
+com.microsoft.Powerpoint
+com.microsoft.OneDrive-mac
+us.zoom.xos
+```
+
+
+
 ## who/why defered in jamf (see whodefered.sh)
 `cat /Library/Application\ Support/JAMF/.userdelay.plist`
 
