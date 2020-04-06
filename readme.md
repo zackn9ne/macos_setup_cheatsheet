@@ -20,6 +20,10 @@ us.zoom.xos
 com.tinyspeck.slackmacgap
 ```
 
+## a good jamf patching source
+Patch Source: 3 (BeatleMike) 
+
+`beta2.communitypatch.com/jamf/v1/64b23b234facb1d173e92941cf3ff452`
 
 
 ## who/why defered in jamf (see whodefered.sh)
