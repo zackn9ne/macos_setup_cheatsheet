@@ -8,6 +8,7 @@
 
 ### common bundle ID's
 ```
+WhatsApp
 com.google.Chrome
 org.mozilla.firefox
 com.microsoft.Word
