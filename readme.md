@@ -8,6 +8,7 @@
 
 ### common bundle ID's
 ```
+com.getdropbox.dropbox
 WhatsApp
 com.google.Chrome
 org.mozilla.firefox
