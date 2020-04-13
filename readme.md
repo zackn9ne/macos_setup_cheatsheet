@@ -1,5 +1,8 @@
 # macOS Sysadmin Cheatsheet
 
+## plist to json (used for autopkg)
+`plutil -convert json ncf-autopkg_prefs.plist -o splash.plist`
+
 ## how to get app version
 `defaults read /Applications/zoom.us.app/Contents/Info.plist CFBundleShortVersionString`
 
