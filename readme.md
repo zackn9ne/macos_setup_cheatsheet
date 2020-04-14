@@ -33,8 +33,8 @@ Patch Source: 3 (BeatleMike)
 ## who/why defered in jamf (see whodefered.sh)
 `cat /Library/Application\ Support/JAMF/.userdelay.plist`
 
-## clear depnotify fails (not that you should trust this without viewing source)
-`curl -O https://raw.githubusercontent.com/zackn9ne/macos_setup_cheatsheet/master/depnotify_tools/clear_fails.sh && sudo sh clear_fails.sh`
+## clear depnotify fails (cfprefsd is evil)
+`curl -O https://raw.githubusercontent.com/jamf/DEPNotify-Starter/master/depNotifyReset.sh && sudo sh depNotifyReset.sh`
 
 ## see what crashed and why
 `ls /Users/$USER/Library/Logs/DiagnosticReports/`
