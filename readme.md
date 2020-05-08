@@ -4,9 +4,10 @@
 `plutil -convert json site-autopkg_prefs.plist -o site.plist`
 
 ## how to get app version
-`defaults read /Applications/zoom.us.app/Contents/Info.plist CFBundleShortVersionString`
-`defaults read /Applications/Slack.app/Contents/Info.plist CFBundleShortVersionString`
-
+```
+defaults read /Applications/zoom.us.app/Contents/Info.plist CFBundleShortVersionString
+defaults read /Applications/Slack.app/Contents/Info.plist CFBundleShortVersionString
+```
 
 ## how to get bundle ID
 `/usr/libexec/PlistBuddy -c 'Print CFBundleIdentifier' /Applications/Safari.app/Contents/Info.plist`
