@@ -1,5 +1,8 @@
 # macOS Sysadmin Cheatsheet
 
+## run a speedcheck multiply x10 for MB/sec roughly
+`curl -o /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip`
+
 ## plist to json (used for autopkg)
 `plutil -convert json site-autopkg_prefs.plist -o site.plist`
 
