@@ -1,5 +1,11 @@
 # macOS Sysadmin Cheatsheet
 
+## find JAMF Policies ran in the last hour
+`cat /var/log/jamf.log | grep "$(date "+%a %b %e %H")"`
+
+## last day
+`cat /var/log/jamf.log | grep "$(date "+%a %b %e")"`
+
 ## run a speedcheck multiply x10 for MB/sec roughly
 `curl -o /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip`
 
