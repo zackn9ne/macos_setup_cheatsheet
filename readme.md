@@ -37,6 +37,8 @@ com.microsoft.Powerpoint
 com.microsoft.OneDrive-mac
 us.zoom.xos
 com.tinyspeck.slackmacgap
+com.FormaGrid.Airtable
+com.linebreak.CloudAppMacOSX
 ```
 
 ## a good jamf patching source
