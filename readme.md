@@ -27,6 +27,7 @@ com.adobe.acc.AdobeCreativeCloud
 com.getdropbox.dropbox
 WhatsApp
 com.adobe.Reader
+com.adobe.acc.AdobeCreativeCloud
 com.google.Chrome
 org.mozilla.firefox
 com.microsoft.Word
