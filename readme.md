@@ -21,11 +21,12 @@ defaults read /Applications/Slack.app/Contents/Info.plist CFBundleShortVersionSt
 ## how to get bundle ID
 `/usr/libexec/PlistBuddy -c 'Print CFBundleIdentifier' /Applications/Safari.app/Contents/Info.plist`
 
-### Annoying bundle ID's Collection
+### Bundle ID's Collection (if you're too busy to look up)
 ```
 com.adobe.acc.AdobeCreativeCloud
 com.getdropbox.dropbox
 WhatsApp
+com.adobe.Reader
 com.google.Chrome
 org.mozilla.firefox
 com.microsoft.Word
