@@ -24,10 +24,11 @@ defaults read /Applications/Slack.app/Contents/Info.plist CFBundleShortVersionSt
 ### Bundle ID's Collection (if you're too busy to look up)
 ```
 com.adobe.acc.AdobeCreativeCloud
-com.getdropbox.dropbox
-WhatsApp
 com.adobe.Reader
 com.adobe.acc.AdobeCreativeCloud
+com.linebreak.CloudAppMacOSX
+com.getdropbox.dropbox
+com.FormaGrid.Airtable
 com.google.Chrome
 org.mozilla.firefox
 com.microsoft.Word
@@ -35,10 +36,10 @@ com.microsoft.Excel
 com.microsoft.Outlook
 com.microsoft.Powerpoint
 com.microsoft.OneDrive-mac
-us.zoom.xos
 com.tinyspeck.slackmacgap
-com.FormaGrid.Airtable
-com.linebreak.CloudAppMacOSX
+WhatsApp
+io.zeplin.osx
+us.zoom.xos
 ```
 
 ## a good jamf patching source
